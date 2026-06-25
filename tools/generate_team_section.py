@@ -2,7 +2,7 @@
 """
 Generate the "Meet the Team" section of about-us.html from team.json.
 
-Source of truth:   team.json   (edit this — names, titles, order, photos)
+Source of truth:   team.json   (edit this: names, titles, order, photos)
 Targets (rewritten): about-us.html  (between the TEAM:START / TEAM:END markers)
                      images/PHOTO-DOWNLOAD-LIST.md
                      tools/download_photos.sh
@@ -22,7 +22,7 @@ import re
 import sys
 from pathlib import Path
 
-MARK_START = ('<!-- TEAM:START — auto-generated from team.json by '
+MARK_START = ('<!-- TEAM:START - auto-generated from team.json by '
               'tools/generate_team_section.py. Edit team.json and re-run; '
               'do not hand-edit between the markers. -->')
 MARK_END = '<!-- TEAM:END -->'
@@ -89,7 +89,7 @@ def write_section(root: Path, inner: str) -> str:
         mode = 'updated (between markers)'
     else:
         new_section = (
-            '  <!-- MEET THE TEAM — auto-generated from team.json '
+            '  <!-- MEET THE TEAM - auto-generated from team.json '
             '(see tools/generate_team_section.py) -->\n'
             '  <section class="content-section content-section--gray" id="leadership">\n'
             '    <div class="content-inner">\n'

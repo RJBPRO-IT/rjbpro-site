@@ -16,6 +16,14 @@ cd "$(dirname "$0")"
 # Clear any stale lock left by an interrupted git run
 rm -f ".git/index.lock" 2>/dev/null || true
 
+# Regenerate data-driven sections (team page, blog) so the HTML is always current
+if command -v python3 >/dev/null 2>&1; then
+  if [ -f tools/generate_team_section.py ]; then echo "→ Rebuilding team section..."; python3 tools/generate_team_section.py >/dev/null; fi
+  if [ -f tools/generate_blog.py ]; then echo "→ Rebuilding blog..."; python3 tools/generate_blog.py >/dev/null; fi
+else
+  echo "→ (python3 not found — skipping auto-regeneration; run the generators manually if needed)"
+fi
+
 echo "→ Staging all changes..."
 git add -A
 
