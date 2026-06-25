@@ -224,6 +224,45 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .btn-ghost:hover { color: var(--orange); }
 
+.btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 2px solid var(--orange);
+  padding: calc(0.85rem - 2px) calc(1.75rem - 2px);
+}
+.btn-outline:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
+/* Careers — benefits list + button row */
+.benefits-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+.benefits-list li {
+  font-family: var(--font-museo);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.benefits-list li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+}
+.careers-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 2.25rem;
+}
+
 /* --- NAV --- */
 .site-nav {
   position: fixed;
@@ -1389,4 +1428,174 @@ a.insight-card { text-decoration: none; color: inherit; }
 }
 @media (max-width: 768px) {
   .team-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+}
+
+/* ============================================================
+   PROJECT DETAIL PAGES
+   ============================================================ */
+
+/* Make project cards clickable without breaking card styles */
+a.project-card { display: block; text-decoration: none; color: inherit; }
+
+/* Two-column layout: narrative body + Project Details panel */
+.project-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 4rem;
+  align-items: start;
+}
+.project-detail-body h2 {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--navy);
+  line-height: 1.05;
+  margin: 2.5rem 0 1rem;
+}
+.project-detail-body h2:first-child { margin-top: 0; }
+.project-detail-body h3 {
+  font-family: var(--font-museo);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--navy);
+  margin: 1.75rem 0 0.75rem;
+}
+.project-detail-body p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--gray-mid);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.project-detail-body ul {
+  font-family: var(--font-body);
+  color: var(--gray-mid);
+  line-height: 1.7;
+  margin: 0 0 1rem 1.1rem;
+}
+.project-detail-body li { margin-bottom: 0.4rem; }
+
+/* Project Details fact panel */
+.project-facts {
+  background: var(--gray-bg);
+  border-top: 3px solid var(--orange);
+  padding: 2rem;
+  position: sticky;
+  top: calc(var(--nav-h) + 1.5rem);
+}
+.project-facts-label {
+  font-family: var(--font-museo);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 1.25rem;
+}
+.project-fact { padding: 0.85rem 0; border-top: 1px solid var(--gray-light); }
+.project-fact:first-of-type { border-top: none; padding-top: 0; }
+.project-fact-key {
+  font-family: var(--font-museo);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 0.3rem;
+}
+.project-fact-val {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--gray-mid);
+  line-height: 1.5;
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.gallery-item {
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--navy);
+}
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease, opacity var(--transition);
+}
+.gallery-item:hover img { transform: scale(1.05); opacity: 0.92; }
+
+/* Gallery as part of the project page (not a separate section) */
+.project-gallery { margin-top: 3.5rem; }
+.project-gallery h2 {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--navy);
+  line-height: 1.05;
+  margin-bottom: 0.25rem;
+}
+.project-gallery .gallery-grid { margin-top: 1.25rem; }
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+.lightbox.open { display: flex; }
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 84vh;
+  object-fit: contain;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+.lightbox-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0; right: 0;
+  text-align: center;
+  color: rgba(255,255,255,0.85);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 0 1rem;
+}
+.lightbox-btn {
+  position: absolute;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  font-family: var(--font-head);
+  line-height: 1;
+  transition: color var(--transition);
+}
+.lightbox-btn:hover { color: var(--orange); }
+.lightbox-close { top: 1.25rem; right: 1.75rem; font-size: 2.5rem; }
+.lightbox-prev, .lightbox-next { top: 50%; transform: translateY(-50%); font-size: 3.5rem; padding: 0 1.5rem; }
+.lightbox-prev { left: 0.5rem; }
+.lightbox-next { right: 0.5rem; }
+
+/* Project detail — responsive */
+@media (max-width: 1024px) {
+  .project-detail-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .project-facts { position: static; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .lightbox-prev, .lightbox-next { font-size: 2.5rem; padding: 0 0.75rem; }
 }

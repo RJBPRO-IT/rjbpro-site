@@ -101,6 +101,40 @@ Drop your photos into this folder with the exact filenames below. The site will 
 
 ---
 
+## Project Detail Page Heroes (JPG)
+
+Each project now has its own detail page (`project-01.html` … `project-06.html`) with a full-width hero. Drop in a wide hero photo per project.
+
+| Filename | Width | Height | Ratio | Used On |
+|---|---|---|---|---|
+| `project-01-hero.jpg` | 1800px | 600px | 3:1 | project-01.html hero — Big Box Refresh Program |
+| `project-02-hero.jpg` | 1800px | 600px | 3:1 | project-02.html hero — Grocery Chain Rollout |
+| `project-03-hero.jpg` | 1800px | 600px | 3:1 | project-03.html hero — Distribution Center Renovation |
+| `project-04-hero.jpg` | 1800px | 600px | 3:1 | project-04.html hero — National Coatings Program |
+| `project-05-hero.jpg` | 1800px | 600px | 3:1 | project-05.html hero — Convenience Store Rollout |
+| `project-06-hero.jpg` | 1800px | 600px | 3:1 | project-06.html hero — Fulfillment Center Build-Out |
+
+---
+
+## Project Gallery Images (JPG)
+
+Each detail page has a photo gallery (click-to-enlarge lightbox). The galleries currently use placeholder photos. To use real photos, drop them in with the naming below and swap the placeholder URLs (run the URL-swap script, same as the other placeholders).
+
+**Naming pattern:** `project-0X-gallery-N.jpg` — where `X` is the project number (1–6) and `N` is the photo number. Add as many as you like; each `<figure class="gallery-item">` in the page is one photo.
+
+| Filename pattern | Width | Height | Ratio | Used On |
+|---|---|---|---|---|
+| `project-01-gallery-1.jpg`, `-2.jpg`, … | 800px | 600px | 4:3 | project-01.html gallery |
+| `project-02-gallery-1.jpg`, `-2.jpg`, … | 800px | 600px | 4:3 | project-02.html gallery |
+| `project-03-gallery-1.jpg`, `-2.jpg`, … | 800px | 600px | 4:3 | project-03.html gallery |
+| `project-04-gallery-1.jpg`, `-2.jpg`, … | 800px | 600px | 4:3 | project-04.html gallery |
+| `project-05-gallery-1.jpg`, `-2.jpg`, … | 800px | 600px | 4:3 | project-05.html gallery |
+| `project-06-gallery-1.jpg`, `-2.jpg`, … | 800px | 600px | 4:3 | project-06.html gallery |
+
+> Tip: for a sharper lightbox view, you can add a larger image and point to it with `data-full="images/your-big-photo.jpg"` on the `<figure>`.
+
+---
+
 ## Insights / Blog Thumbnails (JPG)
 
 | Filename | Width | Height | Ratio | Used On |
