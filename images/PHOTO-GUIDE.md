@@ -107,7 +107,7 @@ Each project now has its own detail page (`project-01.html` … `project-06.html
 
 | Filename | Width | Height | Ratio | Used On |
 |---|---|---|---|---|
-| `project-01-hero.jpg` | 1800px | 600px | 3:1 | project-01.html hero — Big Box Refresh Program |
+| `project-01-hero.jpg` | 1800px | 600px | 3:1 | project-01.html hero — T-Mobile Store Remodel |
 | `project-02-hero.jpg` | 1800px | 600px | 3:1 | project-02.html hero — Grocery Chain Rollout |
 | `project-03-hero.jpg` | 1800px | 600px | 3:1 | project-03.html hero — Distribution Center Renovation |
 | `project-04-hero.jpg` | 1800px | 600px | 3:1 | project-04.html hero — National Coatings Program |
