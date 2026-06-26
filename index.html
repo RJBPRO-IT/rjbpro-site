@@ -263,8 +263,29 @@
   <!-- ====== TESTIMONIAL ====== -->
   <section class="testimonial-section">
     <div class="testimonial-inner">
-      <blockquote class="testimonial-quote">RJB has been an incredibly reliable partner. They've consistently come through, especially with last-minute needs.</blockquote>
-      <p class="testimonial-attr">Facilities Leadership · Fortune 500 Retail Client</p>
+      <div class="testimonial-viewport">
+        <button class="testimonial-arrow testimonial-prev" type="button" aria-label="Previous testimonial">&#8249;</button>
+        <div class="testimonial-track" id="testimonialTrack" aria-live="polite">
+          <figure class="testimonial-slide is-active">
+            <blockquote class="testimonial-quote">Continue providing great customer service, timely responses, and actionable project management. I appreciate your partnership with Lowe's as well as the attention you give our programs. You are one of the few account representatives that I use as the benchmark on how I expect service and support to Lowe's. Thank you!</blockquote>
+            <figcaption class="testimonial-attr">North Division Facilities Director, Lowe's Companies Inc</figcaption>
+          </figure>
+          <figure class="testimonial-slide">
+            <blockquote class="testimonial-quote">This may have been the best project execution that I have seen yet. The team was efficient and effective. They did an excellent job with little to no disturbance.</blockquote>
+            <figcaption class="testimonial-attr">Brian Zimmer, Home Depot Store Manager</figcaption>
+          </figure>
+          <figure class="testimonial-slide">
+            <blockquote class="testimonial-quote">RJB Contracting has been an incredibly reliable partner for Walmart. They've consistently come through for us, especially when we've had last-minute needs. Their dedication and responsiveness have made a huge difference in keeping our projects on track.</blockquote>
+            <figcaption class="testimonial-attr">Audrey Freeman (Project Manager II &ndash; Structure Team), Walmart</figcaption>
+          </figure>
+        </div>
+        <button class="testimonial-arrow testimonial-next" type="button" aria-label="Next testimonial">&#8250;</button>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots">
+        <button class="testimonial-dot is-active" type="button" aria-label="Go to testimonial 1"></button>
+        <button class="testimonial-dot" type="button" aria-label="Go to testimonial 2"></button>
+        <button class="testimonial-dot" type="button" aria-label="Go to testimonial 3"></button>
+      </div>
     </div>
   </section>
 
@@ -397,6 +418,50 @@
         }
       });
     });
+
+    // Testimonial rotator (auto-fade + arrows + dots)
+    (function () {
+      const track = document.getElementById('testimonialTrack');
+      if (!track) return;
+      const slides = Array.from(track.querySelectorAll('.testimonial-slide'));
+      const dots = Array.from(document.querySelectorAll('#testimonialDots .testimonial-dot'));
+      const prevBtn = document.querySelector('.testimonial-prev');
+      const nextBtn = document.querySelector('.testimonial-next');
+      if (slides.length < 2) return;
+
+      const DELAY = 8000;
+      let current = 0;
+      let timer = null;
+
+      function setHeight() {
+        track.style.height = slides[current].offsetHeight + 'px';
+      }
+      function show(index) {
+        index = (index + slides.length) % slides.length;
+        slides[current].classList.remove('is-active');
+        if (dots[current]) dots[current].classList.remove('is-active');
+        current = index;
+        slides[current].classList.add('is-active');
+        if (dots[current]) dots[current].classList.add('is-active');
+        setHeight();
+      }
+      function start() { stop(); timer = setInterval(() => show(current + 1), DELAY); }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+      if (nextBtn) nextBtn.addEventListener('click', () => { show(current + 1); start(); });
+      if (prevBtn) prevBtn.addEventListener('click', () => { show(current - 1); start(); });
+      dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); start(); }));
+
+      track.addEventListener('mouseenter', stop);
+      track.addEventListener('mouseleave', start);
+
+      setHeight();
+      window.addEventListener('resize', setHeight);
+      window.addEventListener('load', setHeight);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(setHeight);
+
+      start();
+    })();
   </script>
 
   <!-- D3 US Map Renderer -->
