@@ -249,7 +249,8 @@
             <style>
               .state-fill { fill: #ffffff; stroke: none; cursor: default; transition: fill 0.2s ease; }
               .state-fill:hover { fill: #FF5113; }
-              .state-borders { fill: none; stroke: #001C3A; stroke-width: 1.5; stroke-linejoin: round; }
+              .state-borders { fill: none; stroke: #001C3A; stroke-width: 1; stroke-linejoin: round; }
+              .state-exterior { fill: none; stroke: #001C3A; stroke-width: 2.5; stroke-linejoin: round; }
             </style>
           </defs>
 
@@ -484,10 +485,16 @@
           .attr('d', path)
           .append('title').text(d => d.properties.name);
 
-        // White border mesh between states
+        // Interior borders between states
         svg.append('path')
           .datum(topojson.mesh(us, us.objects.states, (a, b) => a !== b))
           .attr('class', 'state-borders')
+          .attr('d', path);
+
+        // Exterior outline of the whole country
+        svg.append('path')
+          .datum(topojson.mesh(us, us.objects.states, (a, b) => a === b))
+          .attr('class', 'state-exterior')
           .attr('d', path);
 
       });
