@@ -478,6 +478,11 @@
         const states = topojson.feature(us, us.objects.states);
 
         // 48 contiguous states only - exclude AK (02) and HI (15)
+        const contiguous = {
+          type: us.objects.states.type,
+          geometries: us.objects.states.geometries.filter(d => d.id !== '02' && d.id !== '15')
+        };
+
         svg.selectAll('path.state-fill')
           .data(states.features.filter(d => d.id !== '02' && d.id !== '15'))
           .join('path')
@@ -485,15 +490,15 @@
           .attr('d', path)
           .append('title').text(d => d.properties.name);
 
-        // Interior borders between states
+        // Interior borders between contiguous states only
         svg.append('path')
-          .datum(topojson.mesh(us, us.objects.states, (a, b) => a !== b))
+          .datum(topojson.mesh(us, contiguous, (a, b) => a !== b))
           .attr('class', 'state-borders')
           .attr('d', path);
 
-        // Exterior outline of the whole country
+        // Exterior outline of contiguous states only
         svg.append('path')
-          .datum(topojson.mesh(us, us.objects.states, (a, b) => a === b))
+          .datum(topojson.mesh(us, contiguous, (a, b) => a === b))
           .attr('class', 'state-exterior')
           .attr('d', path);
 
