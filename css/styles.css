@@ -709,8 +709,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   align-items: center;
 }
 .map-text .section-head-block { margin-bottom: 1.5rem; }
-.map-text .section-label { color: rgba(255,255,255,0.6); }
-.map-text .t-section-head { color: var(--white); }
+.map-text .section-label { color: var(--orange); }
+.map-text .t-section-head { color: var(--navy); }
 .map-text p {
   font-family: var(--font-body);
   font-size: 1rem;
