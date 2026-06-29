@@ -6,6 +6,15 @@
   <meta name="description" content="RJB Contracting serves grocery, QSR, retail, warehouse, and healthcare sectors. National commercial contractor trusted by America's biggest brands since 1992." />
   <title>Sectors | RJB Contracting</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Sector landing: all five sectors in one row, smaller cards */
+    .sectors-row { grid-template-columns: repeat(5, 1fr); }
+    .sectors-row .service-card { height: 400px; }
+    .sectors-row .service-card-content { padding: 1.5rem; }
+    .sectors-row .service-card-desc { font-size: 0.82rem; margin-bottom: 1rem; }
+    @media (max-width: 1100px) { .sectors-row { grid-template-columns: repeat(3, 1fr); } .sectors-row .service-card { height: 440px; } }
+    @media (max-width: 760px)  { .sectors-row { grid-template-columns: 1fr; } .sectors-row .service-card { height: 420px; } }
+  </style>
 </head>
 <body style="padding-top:var(--nav-h);">
 
@@ -103,7 +112,7 @@
   <section style="background:var(--white);padding-bottom:5rem;">
     <div class="content-inner">
       <div class="section-label" style="margin-bottom:2rem;">Our Sectors</div>
-      <div class="services-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="services-grid sectors-row">
 
         <a href="sector-grocery.html" class="service-card" style="text-decoration:none;">
           <div class="service-card-bg" style="background-image:url('images/sector-grocery.jpg');"></div>
@@ -163,32 +172,6 @@
       </div>
     </div>
   </section>
-
-  <!-- STATS BAR -->
-  <div class="stats-bar">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="t-stat-num">6</div>
-        <div class="t-stat-label">Sectors Served</div>
-        <div class="stat-desc">From grocery to healthcare, we've built across every major commercial environment.</div>
-      </div>
-      <div class="stat-item">
-        <div class="t-stat-num">48</div>
-        <div class="t-stat-label">States</div>
-        <div class="stat-desc">National reach with regional accountability.</div>
-      </div>
-      <div class="stat-item">
-        <div class="t-stat-num">30+</div>
-        <div class="t-stat-label">Years in the Field</div>
-        <div class="stat-desc">Family-owned since 1992 with the experience to prove it.</div>
-      </div>
-      <div class="stat-item">
-        <div class="t-stat-num">4</div>
-        <div class="t-stat-label">Trades In-House</div>
-        <div class="stat-desc">Coatings, drywall, carpentry, and fixturing, all under one roof.</div>
-      </div>
-    </div>
-  </div>
 
   <!-- CTA -->
   <div class="sub-cta">
