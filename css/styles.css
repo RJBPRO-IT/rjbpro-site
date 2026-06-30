@@ -1151,6 +1151,40 @@ a.insight-card { text-decoration: none; color: inherit; }
   margin-top: 1rem;
 }
 
+/* --- PAGE SUB-NAV (in-page anchor navigation) --- */
+.page-subnav {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-light);
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 90;
+}
+.page-subnav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.page-subnav-inner::-webkit-scrollbar { display: none; }
+.page-subnav-link {
+  font-family: var(--font-museo);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  text-decoration: none;
+  padding: 1rem 1.25rem;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color var(--transition), border-color var(--transition);
+  flex-shrink: 0;
+}
+.page-subnav-link:hover { color: var(--navy); border-bottom-color: var(--gray-light); }
+.page-subnav-link.is-active { color: var(--navy); border-bottom-color: var(--orange); }
+
 /* --- CONTENT SECTIONS (inner pages) --- */
 .content-section {
   padding: 5rem 0;

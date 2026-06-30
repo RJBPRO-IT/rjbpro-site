@@ -69,8 +69,19 @@
     </div>
   </section>
 
+  <!-- PAGE SUB-NAV -->
+  <nav class="page-subnav" id="page-subnav" aria-label="Page sections">
+    <div class="page-subnav-inner">
+      <a href="#our-story" class="page-subnav-link">Our Story</a>
+      <a href="#history" class="page-subnav-link">History</a>
+      <a href="#how-we-work" class="page-subnav-link">How We Work</a>
+      <a href="#leadership" class="page-subnav-link">Meet the Team</a>
+      <a href="#family-owned" class="page-subnav-link">Family-Owned</a>
+    </div>
+  </nav>
+
   <!-- OUR STORY -->
-  <section class="content-section">
+  <section class="content-section" id="our-story">
     <div class="content-inner">
       <div class="content-2col">
         <div class="content-text">
@@ -88,7 +99,7 @@
   </section>
 
   <!-- TIMELINE -->
-  <section class="content-section content-section--gray">
+  <section class="content-section content-section--gray" id="history">
     <div class="content-inner">
       <div class="section-label">Three Decades of Showing Up</div>
       <h2 class="t-section-head" style="margin-bottom:3rem;">The same standard, at every scale</h2>
@@ -126,7 +137,7 @@
   </section>
 
   <!-- RJB ABILITY -->
-  <section class="content-section content-section--navy-dark">
+  <section class="content-section content-section--navy-dark" id="how-we-work">
     <div class="content-inner">
       <div class="section-label" style="color:rgba(255,255,255,0.6);">How We Work</div>
       <h2 class="t-section-head" style="color:var(--white);margin-bottom:1rem;">RJB <span style="color:var(--orange);">[Ability]</span></h2>
@@ -151,24 +162,6 @@
           <div class="capability-num">04</div>
           <div class="capability-title">Safety</div>
           <div class="capability-desc">Working in live retail and industrial environments demands a culture of safety. Every team member is trained, accountable, and empowered to stop work if something isn't right.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAMILY-OWNED -->
-  <section class="content-section">
-    <div class="content-inner">
-      <div class="content-2col">
-        <div class="content-text">
-          <div class="section-label">Family-Owned</div>
-          <h2 class="t-section-head">Building for the next 40 years</h2>
-          <p class="t-body">When Ron Bacskai started RJB in 1992, he wasn't thinking about exit strategies. He was thinking about the next job. That long-term mindset is built into every decision at RJB, from how we invest in our workforce to how we choose the clients we partner with.</p>
-          <p class="t-body">Today, the second generation of the Bacskai family is part of the business, bringing fresh energy to the same foundation. Family ownership means we answer to our clients and our team, not to a corporate mandate or a quarterly earnings call. That freedom lets us do the right thing, every time.</p>
-          <a href="contact-us.html" class="btn btn-orange btn-arrow" style="margin-top:1.5rem;">Start a Project</a>
-        </div>
-        <div>
-          <img src="images/misc/misc-family.jpg" alt="RJB family leadership" class="content-img" loading="lazy" />
         </div>
       </div>
     </div>
@@ -539,6 +532,24 @@
     </div>
   </section>
 
+  <!-- FAMILY-OWNED -->
+  <section class="content-section" id="family-owned">
+    <div class="content-inner">
+      <div class="content-2col">
+        <div class="content-text">
+          <div class="section-label">Family-Owned</div>
+          <h2 class="t-section-head">Building for the next 40 years</h2>
+          <p class="t-body">When Ron Bacskai started RJB in 1992, he wasn't thinking about exit strategies. He was thinking about the next job. That long-term mindset is built into every decision at RJB, from how we invest in our workforce to how we choose the clients we partner with.</p>
+          <p class="t-body">Today, the second generation of the Bacskai family is part of the business, bringing fresh energy to the same foundation. Family ownership means we answer to our clients and our team, not to a corporate mandate or a quarterly earnings call. That freedom lets us do the right thing, every time.</p>
+          <a href="contact-us.html" class="btn btn-orange btn-arrow" style="margin-top:1.5rem;">Start a Project</a>
+        </div>
+        <div>
+          <img src="images/misc/misc-family.jpg" alt="RJB family leadership" class="content-img" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- INDUSTRY STRIP -->
   <div style="background:var(--navy-dark);padding:2rem 0;text-align:center;">
     <div class="content-inner">
@@ -595,6 +606,39 @@
     const toggle = document.getElementById('nav-toggle');
     const mobileNav = document.getElementById('nav-mobile');
     toggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
+
+    // Sub-nav active section highlighting
+    (function () {
+      const links = Array.from(document.querySelectorAll('.page-subnav-link'));
+      const sections = links.map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+      if (!sections.length) return;
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('is-active'));
+            const active = document.querySelector(`.page-subnav-link[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('is-active');
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+
+      sections.forEach(s => observer.observe(s));
+
+      // Smooth scroll with offset for sticky navs
+      links.forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const target = document.querySelector(link.getAttribute('href'));
+          if (target) {
+            const offset = document.getElementById('site-nav').offsetHeight +
+                           document.getElementById('page-subnav').offsetHeight + 16;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        });
+      });
+    })();
   </script>
 </body>
 </html>
