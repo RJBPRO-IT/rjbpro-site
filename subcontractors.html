@@ -121,60 +121,71 @@
     <div class="content-inner" style="text-align:center;">
       <h2 class="t-section-head" style="color:var(--white);margin-bottom:1rem;">Ready to join the network?</h2>
       <p style="font-family:var(--font-museo);font-size:1.1rem;color:rgba(255,255,255,0.75);max-width:600px;margin:0 auto 3rem;line-height:1.6;">Fill out the application below and our team will follow up. We review every submission and reach out when there's a fit.</p>
-      <form action="#" method="post" novalidate style="text-align:left;">
+      <form id="subcontractor-form" action="https://formspree.io/f/xwvdrbwa" method="POST" style="text-align:left;">
+        <input type="hidden" name="subject" value="New Subcontractor Application - RJB Website" />
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+        <div data-fs-success style="color:var(--white);font-family:var(--font-museo);margin-bottom:1rem;"></div>
+        <div data-fs-error style="color:var(--orange);font-family:var(--font-museo);margin-bottom:1rem;"></div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
           <div class="form-group">
             <label for="company-name" style="color:rgba(255,255,255,0.7);">Company Name</label>
-            <input type="text" id="company-name" name="company_name" placeholder="Your company name" required />
+            <input type="text" id="company-name" name="company_name" placeholder="Your company name" data-fs-field required />
+            <span data-fs-error="company_name" style="color:var(--orange);font-size:0.8rem;display:block;margin-top:0.35rem;"></span>
           </div>
           <div class="form-group">
             <label for="contact-name" style="color:rgba(255,255,255,0.7);">Contact Name</label>
-            <input type="text" id="contact-name" name="contact_name" placeholder="Your name" required />
+            <input type="text" id="contact-name" name="contact_name" placeholder="Your name" data-fs-field required />
+            <span data-fs-error="contact_name" style="color:var(--orange);font-size:0.8rem;display:block;margin-top:0.35rem;"></span>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
           <div class="form-group">
             <label for="sub-email" style="color:rgba(255,255,255,0.7);">Email</label>
-            <input type="email" id="sub-email" name="email" placeholder="your@email.com" required />
+            <input type="email" id="sub-email" name="email" placeholder="your@email.com" data-fs-field required />
+            <span data-fs-error="email" style="color:var(--orange);font-size:0.8rem;display:block;margin-top:0.35rem;"></span>
           </div>
           <div class="form-group">
             <label for="sub-phone" style="color:rgba(255,255,255,0.7);">Phone</label>
-            <input type="tel" id="sub-phone" name="phone" placeholder="(555) 000-0000" required />
+            <input type="tel" id="sub-phone" name="phone" placeholder="(555) 000-0000" data-fs-field required />
+            <span data-fs-error="phone" style="color:var(--orange);font-size:0.8rem;display:block;margin-top:0.35rem;"></span>
           </div>
         </div>
         <div class="form-group">
           <label for="trade" style="color:rgba(255,255,255,0.7);">Trade</label>
-          <select id="trade" name="trade">
+          <select id="trade" name="trade" data-fs-field>
             <option value="" disabled selected>Select your trade</option>
-            <option value="paint">Paint &amp; Coatings</option>
-            <option value="drywall">Drywall</option>
-            <option value="carpentry">Carpentry</option>
-            <option value="fixturing">Fixturing</option>
-            <option value="electrical">Electrical</option>
-            <option value="plumbing">Plumbing</option>
-            <option value="hvac">HVAC</option>
-            <option value="other">Other</option>
+            <option value="Paint &amp; Coatings">Paint &amp; Coatings</option>
+            <option value="Drywall">Drywall</option>
+            <option value="Carpentry">Carpentry</option>
+            <option value="Fixturing">Fixturing</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Plumbing">Plumbing</option>
+            <option value="HVAC">HVAC</option>
+            <option value="Other">Other</option>
           </select>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
           <div class="form-group">
             <label for="states-covered" style="color:rgba(255,255,255,0.7);">States Covered</label>
-            <input type="text" id="states-covered" name="states_covered" placeholder="e.g. PA, NJ, NY, DE, MD" />
+            <input type="text" id="states-covered" name="states_covered" placeholder="e.g. PA, NJ, NY, DE, MD" data-fs-field />
           </div>
           <div class="form-group">
             <label for="years-in-business" style="color:rgba(255,255,255,0.7);">Years in Business</label>
-            <input type="text" id="years-in-business" name="years_in_business" placeholder="e.g. 12" />
+            <input type="text" id="years-in-business" name="years_in_business" placeholder="e.g. 12" data-fs-field />
           </div>
         </div>
         <div class="form-group">
           <label for="about-company" style="color:rgba(255,255,255,0.7);">Tell us about your company</label>
-          <textarea id="about-company" name="about_company" placeholder="Experience, crew size, notable projects, certifications..."></textarea>
+          <textarea id="about-company" name="about_company" placeholder="Experience, crew size, notable projects, certifications..." data-fs-field></textarea>
         </div>
-        <div class="form-group" style="display:flex;align-items:flex-start;gap:0.6rem;">
-          <input type="checkbox" id="licensed-insured" name="licensed_insured" required style="margin-top:0.3rem;width:auto;" />
-          <label for="licensed-insured" style="color:rgba(255,255,255,0.7);margin:0;">I confirm my company currently holds active trade licenses and general liability &amp; workers' compensation insurance.</label>
+        <div class="form-group">
+          <div style="display:flex;align-items:flex-start;gap:0.6rem;">
+            <input type="checkbox" id="licensed-insured" name="licensed_insured" data-fs-field required style="margin-top:0.3rem;width:auto;" />
+            <label for="licensed-insured" style="color:rgba(255,255,255,0.7);margin:0;">I confirm my company currently holds active trade licenses and general liability &amp; workers' compensation insurance.</label>
+          </div>
+          <span data-fs-error="licensed_insured" style="color:var(--orange);font-size:0.8rem;display:block;margin-top:0.35rem;"></span>
         </div>
-        <button type="submit" class="btn btn-orange btn-arrow">Submit Application</button>
+        <button type="submit" class="btn btn-orange btn-arrow" data-fs-submit-btn>Submit Application</button>
       </form>
     </div>
   </section>
@@ -229,5 +240,16 @@
     const mobileNav = document.getElementById('nav-mobile');
     toggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
   </script>
+
+  <!-- FORMSPREE: Subcontractor Application -->
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', {
+      formElement: '#subcontractor-form',
+      formId: 'xwvdrbwa',
+      onSuccess: () => { window.location.href = 'thank-you-subcontractor.html'; }
+    });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>

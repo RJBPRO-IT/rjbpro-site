@@ -89,48 +89,55 @@
           </div>
         </div>
         <div>
-          <form action="#" method="post" novalidate>
+          <form id="contact-form" action="https://formspree.io/f/xkolqbpq" method="POST">
+            <input type="hidden" name="subject" value="New Contact Form Submission - RJB Website" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <div data-fs-success style="color:var(--navy);font-family:var(--font-museo);margin-bottom:1rem;"></div>
+            <div data-fs-error style="color:var(--orange-dark);font-family:var(--font-museo);margin-bottom:1rem;"></div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
               <div class="form-group">
                 <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first_name" placeholder="First name" required />
+                <input type="text" id="first-name" name="first_name" placeholder="First name" data-fs-field required />
+                <span data-fs-error="first_name" style="color:var(--orange-dark);font-size:0.8rem;display:block;margin-top:0.35rem;"></span>
               </div>
               <div class="form-group">
                 <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last_name" placeholder="Last name" required />
+                <input type="text" id="last-name" name="last_name" placeholder="Last name" data-fs-field required />
+                <span data-fs-error="last_name" style="color:var(--orange-dark);font-size:0.8rem;display:block;margin-top:0.35rem;"></span>
               </div>
             </div>
             <div class="form-group">
               <label for="company">Company</label>
-              <input type="text" id="company" name="company" placeholder="Company name" />
+              <input type="text" id="company" name="company" placeholder="Company name" data-fs-field />
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              <input type="email" id="email" name="email" placeholder="your@email.com" data-fs-field required />
+              <span data-fs-error="email" style="color:var(--orange-dark);font-size:0.8rem;display:block;margin-top:0.35rem;"></span>
             </div>
             <div class="form-group">
               <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" data-fs-field />
             </div>
             <div class="form-group">
               <label for="project-type">Project Type</label>
-              <select id="project-type" name="project_type">
+              <select id="project-type" name="project_type" data-fs-field>
                 <option value="" disabled selected>Select a project type</option>
-                <option value="interior-fit-outs">Interior Fit-Outs</option>
-                <option value="rollout-programs">Rollout Programs</option>
-                <option value="store-remodels">Store Remodels</option>
-                <option value="rebranding-programs">Rebranding Programs</option>
-                <option value="eifs-coatings">EIFS &amp; Coatings</option>
-                <option value="site-surveys">Site Surveys</option>
-                <option value="specialized-solutions">Specialized Solutions</option>
-                <option value="other">Other</option>
+                <option value="Interior Fit-Outs">Interior Fit-Outs</option>
+                <option value="Rollout Programs">Rollout Programs</option>
+                <option value="Store Remodels">Store Remodels</option>
+                <option value="Rebranding Programs">Rebranding Programs</option>
+                <option value="EIFS &amp; Coatings">EIFS &amp; Coatings</option>
+                <option value="Site Surveys">Site Surveys</option>
+                <option value="Specialized Solutions">Specialized Solutions</option>
+                <option value="Other">Other</option>
               </select>
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell us about your project..."></textarea>
+              <textarea id="message" name="message" placeholder="Tell us about your project..." data-fs-field></textarea>
             </div>
-            <button type="submit" class="btn btn-orange btn-arrow">Send Message</button>
+            <button type="submit" class="btn btn-orange btn-arrow" data-fs-submit-btn>Send Message</button>
           </form>
         </div>
       </div>
@@ -187,5 +194,16 @@
     const mobileNav = document.getElementById('nav-mobile');
     toggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
   </script>
+
+  <!-- FORMSPREE: Contact Form -->
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', {
+      formElement: '#contact-form',
+      formId: 'xkolqbpq',
+      onSuccess: () => { window.location.href = 'thank-you-contact.html'; }
+    });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
