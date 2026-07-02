@@ -31,7 +31,7 @@ If GitHub Desktop reports a **conflict**, stop and coordinate — don't force it
 ---
 
 ## Hard rules (do not break)
-- **No invented facts.** Never add specific stats, client names, project details, or claims that aren't confirmed — flag what needs confirming instead. The Projects section currently uses placeholder names and photos.
+- **No invented facts.** Never add specific stats, client names, project details, or claims that aren't confirmed — flag what needs confirming instead.
 - **RJB voice:** confident, plain, no hype. Short sentences, active voice. Avoid buzzwords (leverage, turnkey, best-in-class, industry-leading, seamless, game-changing, etc.).
 - **No "self-perform" messaging anywhere** — permanently removed from the site.
 - **Don't hand-edit many pages one at a time.** For anything that spans multiple pages (nav, footer, swapping image URLs), write a small **Python script** to batch-edit. Don't manually edit 25+ files.
@@ -77,23 +77,26 @@ Plain HTML, CSS, JS — no framework, no build tools, no npm. CSS custom propert
   - Project page hero: `project-0X-hero.jpg`
   - Project gallery: `project-0X-gallery-1.jpg`, `-2.jpg`, …
   - Project thumbnail (Projects page): `project-0X.jpg`
-- **Placeholder swap:** some slots (Projects grid thumbnails, project galleries, insights thumbnails, some detail images) still point at Picsum placeholder URLs. A correctly-named local file will NOT appear until those URLs are swapped to local paths — do that swap with a Python script across all HTML, not by hand. (Team photos and page/service/sector/project heroes already point at local files and appear as soon as they're added.)
+- **Placeholder swap: DONE** (verified by audit 2026-07-02). Every image reference sitewide points at a local file in `images/`, and every referenced file exists. No Picsum/Unsplash/external image URLs remain anywhere.
 
 ---
 
 ## Current state
-- Project detail pages (project-01..06) exist: each has a **Project Details** panel (Client / Sector / Location / Scope), a flexible heading+body area, and a click-to-enlarge **gallery lightbox**. Body copy and gallery photos are placeholders to be filled in.
+- Project detail pages (project-01..06) exist: each has a **Project Details** panel (Client / Sector / Location / Scope), a flexible heading+body area, and a click-to-enlarge **gallery lightbox**. All six now carry real client copy and local photos (T-Mobile, Kohl's, PetSmart, Auntie Anne's/Applegreen, Weis, Tesla).
 - Each project's gallery is part of its page (not a separate section).
-- Footer standardized sitewide to the 7-service version.
+- Footer standardized sitewide to the 7-service version, plus a **Privacy Policy** link in the Company column (privacy-policy.html is live).
+- `_redirects` (Cloudflare Pages redirect map for the WordPress→new-site URL move) is complete: main pages, services, sectors, six confirmed project mappings, six migrated blog posts, catch-alls. It only takes effect once the site is served through Cloudflare Pages.
+- **Do NOT run `tools/generate_blog.py` until `posts/` is reconciled.** `posts/*.md` is out of sync with the live site: four live posts (habitat-second-year, nevi-ev-charging, safety-emr, retail-construction-trends-2025) have no .md source, and four unpublished drafts do. Running it would publish the drafts and drop the live posts from the grid — and its page template omits the favicon links the live insight pages have. Make sitewide chrome changes with a batch script instead (see `tools/add_privacy_footer_link.py`).
 - Careers page: intro copy + Benefits, two buttons (**Work for RJB** → UKG/saashr portal; **Indeed Openings** → Indeed), and the old Open Positions list removed.
 - About-us "Meet the Team" section is built and references 45 `team-*.jpg` photos.
 
 ---
 
 ## Known pending
-- Connect custom domain **rjbpro.com**.
-- Fill in real project copy + photos (replace placeholders) and run the placeholder→local image swap.
-- Insights thumbnails and some detail images still placeholders.
+- Connect custom domain **rjbpro.com** (via Cloudflare Pages, so `_redirects` works).
+- Back-fill `posts/*.md` for the four live posts with no source, and decide on the four drafts (see Current state).
+- Compress 7 oversized card images (sector-sustainable-infrastructure, service-rollout-programs, sector-grocery, sector-qsr, sector-retail, service-interior-fit-outs, service-store-remodels — all 312–442KB vs the 300KB card limit).
+- Minor cleanup: project-01..06 use the `&#9662;` caret entity in the nav (rest of site uses literal `▾`); authoring-instruction HTML comments remain in project pages (~line 81) and index.html line 12; 3 unreferenced images sit in `images/` (clients/tesla.png, misc/misc-family.jpg, and a root-level duplicate of service-interior-fit-outs-detail.jpg).
 
 ---
 
