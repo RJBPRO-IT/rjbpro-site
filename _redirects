@@ -18,9 +18,8 @@
 /safety               /about-us.html                          301
 /areas-serviced/      /index.html                             301
 /areas-serviced       /index.html                             301
-/privacy-policy/      /index.html                             301
-/privacy-policy       /index.html                             301
-# ^ TEMPORARY: repoint to /privacy-policy.html once the page is created (Issue 6)
+/privacy-policy/      /privacy-policy.html                    301
+/privacy-policy       /privacy-policy.html                    301
 
 # --- Services ---
 /construction/        /services.html                          301
@@ -40,8 +39,9 @@
 /project/t-mobile-store-remodels/      /project-01.html   301
 /project/weis-remodel/                 /project-05.html   301
 /project/tesla-supercharger-stations/  /project-06.html   301
-# TODO: once project-02/03/04 clients are confirmed, add their specific
-# mappings above this line (e.g. /project/panera-remodel/ -> /project-0X.html)
+/project/kohls-self-checkout-install/  /project-02.html   301
+/project/petsmart-store-refresh-remodels-rjb-contracting/  /project-03.html   301
+/project/auntie-annes-fit-out/         /project-04.html   301
 
 # --- All other WordPress project pages -> projects index ---
 /project/*            /projects.html                          301
@@ -51,10 +51,8 @@
 /news/the-growing-demand-for-curbside-pickup/         /insight-building-for-curbside.html             301
 /news/pas-first-ever-nevi-funded-tesla-charging-station/  /insight-nevi-ev-charging.html              301
 /news/rjb-builds-with-habitat-for-humanity-2/         /insight-habitat-second-year.html               301
-# TODO: check the repo for additional insight-*.html pages and map any other
-# migrated posts here (3-point locks, EMR/safety, commercial painting PPE,
-# fire suppression, EV commercial real estate, coatings, Habitat year one,
-# employee safety commitment) before relying on the catch-all below.
+/news/rjb-builds-with-habitat-for-humanity/           /insight-rjb-in-the-community.html              301
+/news/safety-first-practices-improving-emr/           /insight-safety-emr.html                        301
 
 # --- Remaining /news URLs (unmigrated posts, author/category archives) ---
 /news/*               /insights.html                          301
