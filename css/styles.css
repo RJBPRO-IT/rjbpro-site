@@ -291,7 +291,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .nav-logo img {
-  height: 58px;
+  height: 100px;
   width: auto;
   filter: brightness(0) invert(1);
 }
