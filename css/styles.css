@@ -294,6 +294,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   height: 44px;
   width: auto;
   filter: brightness(0) invert(1);
+  transition: height var(--transition);
+}
+.site-nav.transparent .nav-logo img {
+  height: 62px;
 }
 
 .nav-links {
