@@ -7,8 +7,8 @@ Project context for Claude. If you're working in this folder, read this first. I
 ## What this is
 A static HTML/CSS/JS website for RJB Contracting, a national integrated commercial contractor in Spring City, PA, founded 1992. Visual style is modeled on Turner Construction — full-width heroes, large type, photo cards, clean sections. Self-maintained, hosted on GitHub Pages.
 
-- **Repo:** `github.com/rjbpro/rjbpro-site` (private)
-- **Live URL:** https://rjbpro.github.io/rjbpro-site/ (custom domain rjbpro.com is **pending** — not connected yet)
+- **Repo:** `github.com/RJBPRO-IT/rjbpro-site` (private)
+- **Live URL:** https://rjbpro-it.github.io/rjbpro-site/ (custom domain rjbpro.com is **pending** — not connected yet)
 - **Deploys** automatically from the `main` branch, ~1 minute after a push.
 
 ---
