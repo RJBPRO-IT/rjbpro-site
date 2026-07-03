@@ -1,59 +1,52 @@
-# RJB Contracting — WordPress -> new site redirect map
+# RJB Contracting — WordPress -> new site redirect map (v2)
 # Cloudflare Pages _redirects file. Place in the repo root (same level as index.html).
 # Format: source  destination  status
+#
+# Cloudflare Pages pretty-URL constraint (why v2 exists):
+#   1. Destinations must NEVER use .html. Pages serves /about-us.html at /about-us and
+#      redirects the .html URL back to the pretty one, so a .html destination = redirect loop.
+#   2. Old paths whose name matches an existing page (/about-us, /careers, /contact-us,
+#      /projects, /privacy-policy) need NO rule at all — pretty-URL normalization serves
+#      them natively. Only renamed or removed paths belong in this file.
 # Test on the *.pages.dev preview BEFORE DNS cutover, including trailing-slash variants.
 
-# --- Main pages ---
-/about-us/            /about-us.html                          301
-/about-us             /about-us.html                          301
-/meet-the-team/       /about-us.html#leadership               301
-/meet-the-team        /about-us.html#leadership               301
-/careers/             /careers.html                           301
-/careers              /careers.html                           301
-/contact-us/          /contact-us.html                        301
-/contact-us           /contact-us.html                        301
-/projects/            /projects.html                          301
-/projects             /projects.html                          301
-/safety/              /about-us.html                          301
-/safety               /about-us.html                          301
-/areas-serviced/      /index.html                             301
-/areas-serviced       /index.html                             301
-/privacy-policy/      /privacy-policy.html                    301
-/privacy-policy       /privacy-policy.html                    301
-
-# --- Services ---
-/construction/        /services.html                          301
-/construction         /services.html                          301
-/asset-maintenance/   /services.html                          301
-/asset-maintenance    /services.html                          301
-
-# --- Sectors ---
-/retail-construction/          /sector-retail.html                       301
-/retail-construction           /sector-retail.html                       301
-/warehouse-construction/       /sector-warehouse.html                    301
-/warehouse-construction        /sector-warehouse.html                    301
-/sustainable-infrastructure/   /sector-sustainable-infrastructure.html   301
-/sustainable-infrastructure    /sector-sustainable-infrastructure.html   301
+# --- Renamed / removed pages ---
+/meet-the-team/       /about-us#leadership   301
+/meet-the-team        /about-us#leadership   301
+/safety/              /about-us              301
+/safety               /about-us              301
+/areas-serviced/      /                      301
+/areas-serviced       /                      301
+/construction/        /services              301
+/construction         /services              301
+/asset-maintenance/   /services              301
+/asset-maintenance    /services              301
+/retail-construction/          /sector-retail                       301
+/retail-construction           /sector-retail                       301
+/warehouse-construction/       /sector-warehouse                    301
+/warehouse-construction        /sector-warehouse                    301
+/sustainable-infrastructure/   /sector-sustainable-infrastructure   301
+/sustainable-infrastructure    /sector-sustainable-infrastructure   301
 
 # --- Projects with confirmed new-site equivalents ---
-/project/t-mobile-store-remodels/      /project-01.html   301
-/project/weis-remodel/                 /project-05.html   301
-/project/tesla-supercharger-stations/  /project-06.html   301
-/project/kohls-self-checkout-install/  /project-02.html   301
-/project/petsmart-store-refresh-remodels-rjb-contracting/  /project-03.html   301
-/project/auntie-annes-fit-out/         /project-04.html   301
+/project/t-mobile-store-remodels/      /project-01   301
+/project/kohls-self-checkout-install/  /project-02   301
+/project/petsmart-store-refresh-remodels-rjb-contracting/  /project-03   301
+/project/auntie-annes-fit-out/         /project-04   301
+/project/weis-remodel/                 /project-05   301
+/project/tesla-supercharger-stations/  /project-06   301
 
 # --- All other WordPress project pages -> projects index ---
-/project/*            /projects.html                          301
+/project/*            /projects              301
 
-# --- Blog posts confirmed migrated to the new Insights system ---
-/news/retail-construction-trends-for-2025/            /insight-retail-construction-trends-2025.html   301
-/news/the-growing-demand-for-curbside-pickup/         /insight-building-for-curbside.html             301
-/news/pas-first-ever-nevi-funded-tesla-charging-station/  /insight-nevi-ev-charging.html              301
-/news/rjb-builds-with-habitat-for-humanity-2/         /insight-habitat-second-year.html               301
-/news/rjb-builds-with-habitat-for-humanity/           /insight-rjb-in-the-community.html              301
-/news/safety-first-practices-improving-emr/           /insight-safety-emr.html                        301
+# --- Blog posts migrated to the new Insights system ---
+/news/retail-construction-trends-for-2025/            /insight-retail-construction-trends-2025   301
+/news/the-growing-demand-for-curbside-pickup/         /insight-building-for-curbside             301
+/news/pas-first-ever-nevi-funded-tesla-charging-station/  /insight-nevi-ev-charging              301
+/news/rjb-builds-with-habitat-for-humanity-2/         /insight-habitat-second-year               301
+/news/rjb-builds-with-habitat-for-humanity/           /insight-rjb-in-the-community              301
+/news/safety-first-practices-improving-emr/           /insight-safety-emr                        301
 
 # --- Remaining /news URLs (unmigrated posts, author/category archives) ---
-/news/*               /insights.html                          301
-/news                 /insights.html                          301
+/news/*               /insights              301
+/news                 /insights              301
