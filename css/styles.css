@@ -1451,6 +1451,22 @@ a.insight-card { text-decoration: none; color: inherit; }
 .form-group select:focus,
 .form-group textarea:focus { border-color: var(--navy); }
 .form-group textarea { min-height: 140px; resize: vertical; }
+.form-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition);
+}
+.form-group input[type="checkbox"]:checked {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="%23FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M3 8.5l3.5 3.5 6.5-8"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 12px;
+}
 
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
