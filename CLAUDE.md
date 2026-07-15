@@ -88,7 +88,7 @@ Plain HTML, CSS, JS — no framework, no build tools, no npm. CSS custom propert
 - `_redirects` (Cloudflare Pages redirect map for the WordPress→new-site URL move) is complete: main pages, services, sectors, six confirmed project mappings, six migrated blog posts, catch-alls. It only takes effect once the site is served through Cloudflare Pages.
 - **Do NOT run `tools/generate_blog.py` until `posts/` is reconciled.** `posts/*.md` is out of sync with the live site: four live posts (habitat-second-year, nevi-ev-charging, safety-emr, retail-construction-trends-2025) have no .md source, and four unpublished drafts do. Running it would publish the drafts and drop the live posts from the grid — and its page template omits the favicon links the live insight pages have. Make sitewide chrome changes with a batch script instead (see `tools/add_privacy_footer_link.py`).
 - Careers page: intro copy + Benefits, two buttons (**Work for RJB** → UKG/saashr portal; **Indeed Openings** → Indeed), and the old Open Positions list removed.
-- About-us "Meet the Team" section is built and references 45 `team-*.jpg` photos.
+- About-us "Meet the Team" section trimmed to 7 leadership members (Ron, Matt Monzo, Ryan Spratt, Michael Hecker, Brendan, Maddie, Pat Maloney) in a single unlabeled grid — full roster removed intentionally (poaching risk, photo consent, staleness). Edit `team.json` and re-run `tools/generate_team_section.py`; don't hand-edit between the TEAM markers. The other 38 `team-*.jpg` files were deleted from `images/` (2026-07-15); only the 7 leadership headshots remain.
 
 ---
 

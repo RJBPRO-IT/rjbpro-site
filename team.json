@@ -1,92 +1,20 @@
 {
   "section": {
     "label": "Meet the Team",
-    "heading": "Built by People"
+    "heading": "Built by People",
+    "blurb": "Behind this leadership team: 200+ field and office professionals delivering projects across 48 states."
   },
   "groups": [
     {
-      "name": "Executive Team",
+      "name": "",
       "members": [
         { "name": "Ron Bacskai", "title": "President", "file": "team-ron-bacskai.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Ron-Backsai-gradient1.jpg" },
         { "name": "Matthew Monzo", "title": "Chief Financial Officer", "file": "team-matthew-monzo.jpg", "src": "https://rjbpro.com/wp-content/uploads/2024/11/Headshots-3-1024x1024.png" },
-        { "name": "Ryan Spratt", "title": "Chief Operating Officer", "file": "team-ryan-spratt.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Ryan-Spratt-gradient.jpg" }
-      ]
-    },
-    {
-      "name": "Directors",
-      "members": [
+        { "name": "Ryan Spratt", "title": "Chief Operating Officer", "file": "team-ryan-spratt.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Ryan-Spratt-gradient.jpg" },
+        { "name": "Michael Hecker", "title": "Director of Growth & Innovation", "file": "team-michael-hecker.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/04/MHeckerWeb-1-768x768.webp" },
         { "name": "Brendan Bacskai", "title": "Director of Construction", "file": "team-brendan-bacskai.jpg", "src": "https://rjbpro.com/wp-content/uploads/2025/02/Employee-Headshots-1.png" },
         { "name": "Maddie Bacskai", "title": "Director of Projects", "file": "team-maddie-bacskai.jpg", "src": "https://rjbpro.com/wp-content/uploads/2024/07/1-1024x1024.png" },
-        { "name": "Patrick Maloney", "title": "Director of Projects", "file": "team-patrick-maloney.jpg", "src": "https://rjbpro.com/wp-content/uploads/2024/11/3-768x768.png" },
-        { "name": "Michael Hecker", "title": "Director of Growth & Innovation", "file": "team-michael-hecker.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/04/MHeckerWeb-1-768x768.webp" }
-      ]
-    },
-    {
-      "name": "Operations & Administration",
-      "members": [
-        { "name": "Courtney Smith", "title": "HR & Operations Manager", "file": "team-courtney-smith.jpg", "src": "https://rjbpro.com/wp-content/uploads/2024/07/2.png" },
-        { "name": "Gabriel Peralta", "title": "Information Technology Manager", "file": "team-gabriel-peralta.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Gabe_Peralta-gradient.jpg" },
-        { "name": "Daniel Massaro", "title": "Information Technology Technician", "file": "team-daniel-massaro.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Dan-Massaro-gradient.jpg" },
-        { "name": "Erika Price", "title": "Estimating Coordinator", "file": "team-erika-price.jpg", "src": "https://rjbpro.com/wp-content/uploads/2025/04/1.png" },
-        { "name": "Brie Bearden", "title": "Estimator", "file": "team-brie-bearden.jpg", "src": "" },
-        { "name": "Jennifer Schroeder", "title": "Safety Manager", "file": "team-jennifer-schroeder.jpg", "src": "" },
-        { "name": "Kaylah McFarland", "title": "Brand & Business Development Manager", "file": "team-kaylah-mcfarland.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/01/KMcFarland-1.png" },
-        { "name": "Sean Bacskai", "title": "Business Development Executive", "file": "team-sean-bacskai.jpg", "src": "https://rjbpro.com/wp-content/uploads/2024/11/2-768x768.png" },
-        { "name": "Mary Richards", "title": "Content & Marketing Coordinator", "file": "team-mary-richards.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/03/Mary-V1-Web.webp" },
-        { "name": "Kyle Richards", "title": "AI Integrator", "file": "team-kyle-richards.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Kyle-Richards-gradient.jpg" },
-        { "name": "Nardina Johnston", "title": "Customer Success Advocate", "file": "team-nardina-johnston.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Nardina-Johnston-gradient.jpg" }
-      ]
-    },
-    {
-      "name": "Project Management",
-      "members": [
-        { "name": "Marley Venezia", "title": "Project Executive", "file": "team-marley-venezia.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Marley-Venezia-gradient.jpg" },
-        { "name": "Kyle Carstensen", "title": "Senior Project Manager", "file": "team-kyle-carstensen.jpg", "src": "https://rjbpro.com/wp-content/uploads/2025/04/3-768x768.png" },
-        { "name": "John Karnbach", "title": "Senior Project Manager", "file": "team-john-karnbach.jpg", "src": "https://rjbpro.com/wp-content/uploads/2025/12/JohnK-768x768.png" },
-        { "name": "Thonny Campos", "title": "Project Manager", "file": "team-thonny-campos.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/01/Thonny-Campos_Teams-1024x1024.png" },
-        { "name": "Matt Crum", "title": "Project Manager", "file": "team-matt-crum.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Matt-Crum-gradient.jpg" },
-        { "name": "Bob Jones", "title": "Project Manager", "file": "team-bob-jones.jpg", "src": "https://rjbpro.com/wp-content/uploads/2024/11/4-768x768.png" },
-        { "name": "Mike White", "title": "Project Manager", "file": "team-mike-white.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/02/Mike-White-Website-1-768x768.png" },
-        { "name": "Art Shala", "title": "Project Manager", "file": "team-art-shala.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/03/AShalaWeb-768x768.webp" },
-        { "name": "Dan Krier", "title": "Project Manager", "file": "team-dan-krier.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Dan-Krier-PM-gradient.jpg" },
-        { "name": "Joe Holz Jr.", "title": "Project Manager", "file": "team-joe-holz-jr.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Joe-Holz-Jr-gradient.jpg" },
-        { "name": "James Keenan", "title": "Project Manager", "file": "team-james-keenan.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/02/James-Keenan-Web-768x768.png" },
-        { "name": "Rachel Bowman", "title": "Project Manager", "file": "team-rachel-bowman.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Rachel-Bowman-gradient.jpg" },
-        { "name": "Brian Kerrigan", "title": "Project Manager", "file": "team-brian-kerrigan.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Brian-Kerrigan-PM-gradient.jpg" }
-      ]
-    },
-    {
-      "name": "Assistant Project Managers",
-      "members": [
-        { "name": "Missy Powers", "title": "Assistant Project Manager", "file": "team-missy-powers.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Melissa_Powers-gradient.jpg" },
-        { "name": "Ryan Maloney", "title": "Assistant Project Manager", "file": "team-ryan-maloney.jpg", "src": "https://rjbpro.com/wp-content/uploads/2025/02/RMaloneyWeb-1-768x768.png" },
-        { "name": "Andrew Lesinski", "title": "Assistant Project Manager", "file": "team-andrew-lesinski.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Andrew_Lesinski-gradient.jpg" },
-        { "name": "Colin Maloney", "title": "Assistant Project Manager", "file": "team-colin-maloney.jpg", "src": "https://rjbpro.com/wp-content/uploads/2025/12/Collin-Maloney-768x768.png" }
-      ]
-    },
-    {
-      "name": "Project Administration",
-      "members": [
-        { "name": "Michelle Jarvis", "title": "Project Administrator", "file": "team-michelle-jarvis.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Michelle-Jarvis-gradient.jpg" },
-        { "name": "Megan O'Hara", "title": "Project Administrator", "file": "team-megan-ohara.jpg", "src": "https://rjbpro.com/wp-content/uploads/2024/12/3.png" },
-        { "name": "Stephanie Friz", "title": "Project Administrator", "file": "team-stephanie-friz.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/01/StephanieFrizWeb.png" },
-        { "name": "John Field", "title": "Project Administrator", "file": "team-john-field.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/02/JohnFieldWeb.png" }
-      ]
-    },
-    {
-      "name": "Accounting",
-      "members": [
-        { "name": "Janet Tezak", "title": "Controller", "file": "team-janet-tezak.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Janet-Tezak-Controller-gradient.jpg" },
-        { "name": "Valerie Bohn", "title": "Senior Accounting Associate", "file": "team-valerie-bohn.jpg", "src": "https://rjbpro.com/wp-content/uploads/2024/03/Val-Bohn.png" },
-        { "name": "Jessica Clark", "title": "AP Associate", "file": "team-jessica-clark.jpg", "src": "https://rjbpro.com/wp-content/uploads/2025/04/Employee-Headshots-5.png" },
-        { "name": "Nick Proko", "title": "Project Accountant", "file": "team-nick-proko.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/02/Nick-Proko-Web-1.png" }
-      ]
-    },
-    {
-      "name": "Field & Warehouse",
-      "members": [
-        { "name": "Anthony Murphy", "title": "Warehouse Manager", "file": "team-anthony-murphy.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/03/AMurphyWeb.webp" },
-        { "name": "Jamal Jackson", "title": "Warehouse Assistant", "file": "team-jamal-jackson.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/03/JJacksonWeb.webp" }
+        { "name": "Patrick Maloney", "title": "Director of Projects", "file": "team-patrick-maloney.jpg", "src": "https://rjbpro.com/wp-content/uploads/2024/11/3-768x768.png" }
       ]
     }
   ]

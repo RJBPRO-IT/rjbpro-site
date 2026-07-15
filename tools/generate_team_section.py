@@ -50,17 +50,23 @@ def esc(text: str) -> str:
 def build_inner(data: dict) -> str:
     """Build the HTML that lives between the markers (label + heading + groups)."""
     sec = data.get('section', {})
+    blurb = sec.get('blurb', '').strip()
+    head_margin = '1rem' if blurb else '3rem'
     lines = [
         f'      <div class="section-label">{esc(sec.get("label", "Meet the Team"))}</div>',
-        f'      <h2 class="t-section-head" style="margin-bottom:3rem;">'
+        f'      <h2 class="t-section-head" style="margin-bottom:{head_margin};">'
         f'{esc(sec.get("heading", "The team behind the teams."))}</h2>',
     ]
+    if blurb:
+        lines.append(f'      <p class="t-body" style="max-width:640px;'
+                     f'margin-bottom:3rem;">{esc(blurb)}</p>')
     for group in data['groups']:
         members = group.get('members', [])
         if not members:
             continue
         lines.append('      <div class="team-section-group">')
-        lines.append(f'        <h3 class="team-group-label">{esc(group["name"])}</h3>')
+        if group.get('name'):
+            lines.append(f'        <h3 class="team-group-label">{esc(group["name"])}</h3>')
         lines.append('        <div class="team-grid">')
         for m in members:
             alt = esc(f'{m["name"]}, {m["title"]}')
