@@ -1290,8 +1290,8 @@ a.insight-card { text-decoration: none; color: inherit; }
 /* Project cards */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 }
 .project-card {
   display: flex;
@@ -1313,19 +1313,19 @@ a.insight-card { text-decoration: none; color: inherit; }
   display: block;
 }
 .project-card:hover .project-img { transform: scale(1.04); }
-.project-info { padding: 1.25rem 1.5rem 1.25rem; }
+.project-info { padding: 1rem 1.15rem 1.1rem; }
 .project-cat {
   font-family: var(--font-museo);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--orange);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 .project-name {
   font-family: var(--font-head);
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: var(--navy);
   line-height: 1.05;
