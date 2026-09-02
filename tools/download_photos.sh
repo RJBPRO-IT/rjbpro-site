@@ -7,9 +7,9 @@ mkdir -p images
 dl() { echo "downloading $2"; curl -fL --retry 2 -o "images/$2" "$1" || echo "  WARNING: failed -> $2"; }
 
 dl "https://rjbpro.com/wp-content/uploads/2023/11/Ron-Backsai-gradient1.jpg" "team-ron-bacskai.jpg"
-dl "https://rjbpro.com/wp-content/uploads/2024/11/Headshots-3-1024x1024.png" "team-matthew-monzo.jpg"
 dl "https://rjbpro.com/wp-content/uploads/2023/11/Ryan-Spratt-gradient.jpg" "team-ryan-spratt.jpg"
 dl "https://rjbpro.com/wp-content/uploads/2026/04/MHeckerWeb-1-768x768.webp" "team-michael-hecker.jpg"
+# team-janet-tezak.jpg: local file, no source URL - skipped
 dl "https://rjbpro.com/wp-content/uploads/2025/02/Employee-Headshots-1.png" "team-brendan-bacskai.jpg"
 dl "https://rjbpro.com/wp-content/uploads/2024/07/1-1024x1024.png" "team-maddie-bacskai.jpg"
 dl "https://rjbpro.com/wp-content/uploads/2024/11/3-768x768.png" "team-patrick-maloney.jpg"

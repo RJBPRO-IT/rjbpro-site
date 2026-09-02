@@ -8,13 +8,48 @@
     {
       "name": "",
       "members": [
-        { "name": "Ron Bacskai", "title": "President", "file": "team-ron-bacskai.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Ron-Backsai-gradient1.jpg" },
-        { "name": "Matthew Monzo", "title": "Chief Financial Officer", "file": "team-matthew-monzo.jpg", "src": "https://rjbpro.com/wp-content/uploads/2024/11/Headshots-3-1024x1024.png" },
-        { "name": "Ryan Spratt", "title": "Chief Operating Officer", "file": "team-ryan-spratt.jpg", "src": "https://rjbpro.com/wp-content/uploads/2023/11/Ryan-Spratt-gradient.jpg" },
-        { "name": "Michael Hecker", "title": "Director of Growth & Innovation", "file": "team-michael-hecker.jpg", "src": "https://rjbpro.com/wp-content/uploads/2026/04/MHeckerWeb-1-768x768.webp" },
-        { "name": "Brendan Bacskai", "title": "Director of Construction", "file": "team-brendan-bacskai.jpg", "src": "https://rjbpro.com/wp-content/uploads/2025/02/Employee-Headshots-1.png" },
-        { "name": "Maddie Bacskai", "title": "Director of Projects", "file": "team-maddie-bacskai.jpg", "src": "https://rjbpro.com/wp-content/uploads/2024/07/1-1024x1024.png" },
-        { "name": "Patrick Maloney", "title": "Director of Projects", "file": "team-patrick-maloney.jpg", "src": "https://rjbpro.com/wp-content/uploads/2024/11/3-768x768.png" }
+        {
+          "name": "Ron Bacskai",
+          "title": "President",
+          "file": "team-ron-bacskai.jpg",
+          "src": "https://rjbpro.com/wp-content/uploads/2023/11/Ron-Backsai-gradient1.jpg"
+        },
+        {
+          "name": "Ryan Spratt",
+          "title": "Chief Operating Officer",
+          "file": "team-ryan-spratt.jpg",
+          "src": "https://rjbpro.com/wp-content/uploads/2023/11/Ryan-Spratt-gradient.jpg"
+        },
+        {
+          "name": "Michael Hecker",
+          "title": "Director of Growth & Innovation",
+          "file": "team-michael-hecker.jpg",
+          "src": "https://rjbpro.com/wp-content/uploads/2026/04/MHeckerWeb-1-768x768.webp"
+        },
+        {
+          "name": "Janet Tezak",
+          "title": "Vice President of Finance",
+          "file": "team-janet-tezak.jpg",
+          "src": ""
+        },
+        {
+          "name": "Brendan Bacskai",
+          "title": "Director of Construction",
+          "file": "team-brendan-bacskai.jpg",
+          "src": "https://rjbpro.com/wp-content/uploads/2025/02/Employee-Headshots-1.png"
+        },
+        {
+          "name": "Maddie Bacskai",
+          "title": "Director of Projects",
+          "file": "team-maddie-bacskai.jpg",
+          "src": "https://rjbpro.com/wp-content/uploads/2024/07/1-1024x1024.png"
+        },
+        {
+          "name": "Patrick Maloney",
+          "title": "Director of Projects",
+          "file": "team-patrick-maloney.jpg",
+          "src": "https://rjbpro.com/wp-content/uploads/2024/11/3-768x768.png"
+        }
       ]
     }
   ]
