@@ -98,6 +98,7 @@ Drop your photos into this folder with the exact filenames below. The site will 
 | `project-04.jpg` | 600px | 450px | 4:3 | Projects grid — slot 4 |
 | `project-05.jpg` | 600px | 450px | 4:3 | Projects grid — slot 5 |
 | `project-06.jpg` | 600px | 450px | 4:3 | Projects grid — slot 6 |
+| `project-17.jpg` | 600px | 450px | 4:3 | Projects grid — Sheetz Survey Program (**needed**) |
 
 ---
 
@@ -113,6 +114,7 @@ Each project now has its own detail page (`project-01.html` … `project-06.html
 | `project-04-hero.jpg` | 1800px | 600px | 3:1 | project-04.html hero — National Coatings Program |
 | `project-05-hero.jpg` | 1800px | 600px | 3:1 | project-05.html hero — Convenience Store Rollout |
 | `project-06-hero.jpg` | 1800px | 600px | 3:1 | project-06.html hero — Fulfillment Center Build-Out |
+| `project-17-hero.jpg` | 1800px | 600px | 3:1 | project-17.html hero — Sheetz Survey Program (**needed**) |
 
 ---
 
