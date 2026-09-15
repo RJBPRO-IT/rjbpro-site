@@ -997,7 +997,10 @@ a.insight-card { text-decoration: none; color: inherit; }
   line-height: 1.8;
   margin-bottom: 1.25rem;
 }
-.article-body ul, .article-body ol { margin: 0 0 1.25rem 1.5rem; }
+.article-body ul, .article-body ol { margin: 0 0 1.25rem 1.5rem; padding-left: 0.5rem; }
+.article-body ul { list-style: disc; }
+.article-body ol { list-style: decimal; }
+.article-body li::marker { color: var(--orange); }
 .article-body li { font-size: 1.05rem; line-height: 1.7; margin-bottom: 0.5rem; }
 .article-body strong { color: var(--navy); }
 .article-body a { color: var(--orange); border-bottom: 1px solid var(--orange); }
@@ -1674,6 +1677,42 @@ a.project-card { display: block; text-decoration: none; color: inherit; }
 .gallery-item:hover img { transform: scale(1.05); opacity: 0.92; }
 
 /* Gallery as part of the project page (not a separate section) */
+/* --- OUR STORY: full-width video under the copy --- */
+.story-intro { max-width: 820px; }
+.story-video { margin-top: 3rem; }
+
+/* --- PROJECT VIDEO --- */
+.project-video { margin-top: 3.5rem; }
+.project-video h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin: 0 0 1.25rem;
+}
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--navy-dark);
+  overflow: hidden;
+}
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-caption {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--gray-mid);
+  margin-top: 0.75rem;
+}
+
 .project-gallery { margin-top: 3.5rem; }
 .project-gallery h2 {
   font-family: var(--font-head);

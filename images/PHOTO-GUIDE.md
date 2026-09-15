@@ -98,6 +98,7 @@ Drop your photos into this folder with the exact filenames below. The site will 
 | `project-04.jpg` | 600px | 450px | 4:3 | Projects grid — slot 4 |
 | `project-05.jpg` | 600px | 450px | 4:3 | Projects grid — slot 5 |
 | `project-06.jpg` | 600px | 450px | 4:3 | Projects grid — slot 6 |
+| `project-17.jpg` | 600px | 450px | 4:3 | Projects grid — Sheetz Survey Program (**needed**) |
 
 ---
 
@@ -113,6 +114,7 @@ Each project now has its own detail page (`project-01.html` … `project-06.html
 | `project-04-hero.jpg` | 1800px | 600px | 3:1 | project-04.html hero — National Coatings Program |
 | `project-05-hero.jpg` | 1800px | 600px | 3:1 | project-05.html hero — Convenience Store Rollout |
 | `project-06-hero.jpg` | 1800px | 600px | 3:1 | project-06.html hero — Fulfillment Center Build-Out |
+| `project-17-hero.jpg` | 1800px | 600px | 3:1 | project-17.html hero — Sheetz Survey Program (**needed**) |
 
 ---
 
@@ -145,8 +147,10 @@ Each detail page has a photo gallery (click-to-enlarge lightbox). The galleries 
 | `insight-04.jpg` | 600px | 340px | 16:9 | Insights card 4 |
 | `insight-05.jpg` | 600px | 340px | 16:9 | Insights card 5 |
 | `insight-06.jpg` | 600px | 340px | 16:9 | Insights card 6 |
-| `insight-07.jpg` | 600px | 340px | 16:9 | **Reserved** — Biohazards on Site post (planned, not yet published) |
-| `insight-08.jpg` | 600px | 340px | 16:9 | Self-Checkout and Store Layouts (card currently shows the navy placeholder) |
+| `insight-07.jpg` | 600px | 340px | 16:9 | Biohazards on Site / Asbestos card |
+| `insight-08.jpg` | 600px | 340px | 16:9 | Self-Checkout and Store Layouts card |
+| `insight-09.jpg` | 600px | 340px | 16:9 | Fire Safety During Commercial Renovations card (**needed**) |
+| `insight-10.jpg` | 600px | 340px | 16:9 | Retail Restroom Renovations card (**needed**) |
 
 ---
 
