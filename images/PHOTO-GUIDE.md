@@ -149,6 +149,8 @@ Each detail page has a photo gallery (click-to-enlarge lightbox). The galleries 
 | `insight-06.jpg` | 600px | 340px | 16:9 | Insights card 6 |
 | `insight-07.jpg` | 600px | 340px | 16:9 | Biohazards on Site / Asbestos card |
 | `insight-08.jpg` | 600px | 340px | 16:9 | Self-Checkout and Store Layouts card |
+| `insight-09.jpg` | 600px | 340px | 16:9 | Fire Safety During Commercial Renovations card (**needed**) |
+| `insight-10.jpg` | 600px | 340px | 16:9 | Retail Restroom Renovations card (**needed**) |
 
 ---
 
