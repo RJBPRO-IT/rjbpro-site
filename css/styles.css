@@ -997,7 +997,10 @@ a.insight-card { text-decoration: none; color: inherit; }
   line-height: 1.8;
   margin-bottom: 1.25rem;
 }
-.article-body ul, .article-body ol { margin: 0 0 1.25rem 1.5rem; }
+.article-body ul, .article-body ol { margin: 0 0 1.25rem 1.5rem; padding-left: 0.5rem; }
+.article-body ul { list-style: disc; }
+.article-body ol { list-style: decimal; }
+.article-body li::marker { color: var(--orange); }
 .article-body li { font-size: 1.05rem; line-height: 1.7; margin-bottom: 0.5rem; }
 .article-body strong { color: var(--navy); }
 .article-body a { color: var(--orange); border-bottom: 1px solid var(--orange); }
