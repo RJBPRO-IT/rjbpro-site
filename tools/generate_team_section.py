@@ -134,8 +134,12 @@ def write_photo_assets(root: Path, data: dict) -> int:
           'dl() { echo "downloading $2"; curl -fL --retry 2 -o "images/$2" "$1" '
           '|| echo "  WARNING: failed -> $2"; }', '']
     for i, m in enumerate(members, 1):
-        md.append(f'| {i} | {m["name"]} | `images/{m["file"]}` | {m["src"]} |')
-        sh.append(f'dl "{m["src"]}" "{m["file"]}"')
+        md.append(f'| {i} | {m["name"]} | `images/{m["file"]}` | '
+                  f'{m["src"] or "(local file - no download)"} |')
+        if m["src"]:
+            sh.append(f'dl "{m["src"]}" "{m["file"]}"')
+        else:
+            sh.append(f'# {m["file"]}: local file, no source URL - skipped')
     sh.append('echo "Done. Review images/ for any WARNING lines above."')
 
     (root / 'images').mkdir(exist_ok=True)

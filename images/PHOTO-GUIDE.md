@@ -145,6 +145,8 @@ Each detail page has a photo gallery (click-to-enlarge lightbox). The galleries 
 | `insight-04.jpg` | 600px | 340px | 16:9 | Insights card 4 |
 | `insight-05.jpg` | 600px | 340px | 16:9 | Insights card 5 |
 | `insight-06.jpg` | 600px | 340px | 16:9 | Insights card 6 |
+| `insight-07.jpg` | 600px | 340px | 16:9 | **Reserved** — Biohazards on Site post (planned, not yet published) |
+| `insight-08.jpg` | 600px | 340px | 16:9 | Self-Checkout and Store Layouts (card currently shows the navy placeholder) |
 
 ---
 
