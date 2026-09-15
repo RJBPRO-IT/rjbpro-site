@@ -79,7 +79,13 @@ def main():
     if GALLERY_ANCHOR not in html:
         sys.exit(f"ERROR: no gallery block found in {path.name}; can't place the video.")
 
-    html = html.replace(GALLERY_ANCHOR, build(a.video_id, a.title, a.caption) + GALLERY_ANCHOR, 1)
+    # Insert above the gallery. If the gallery carries a leading HTML comment,
+    # go above that too so the comment stays attached to the gallery it describes.
+    anchor = GALLERY_ANCHOR
+    m = re.search(r"([ \t]*<!--\s*GALLERY\b.*?-->\n)" + re.escape(GALLERY_ANCHOR), html, re.S)
+    if m:
+        anchor = m.group(0)
+    html = html.replace(anchor, build(a.video_id, a.title, a.caption) + anchor, 1)
     path.write_text(html)
     print(f"DONE: added video {a.video_id} to {path.name}")
 
