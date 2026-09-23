@@ -172,6 +172,26 @@ Each detail page has a photo gallery (click-to-enlarge lightbox). The galleries 
 
 ---
 
+## Careers — Life Beyond the Jobsite (JPG, folder: `images/culture/`)
+
+Square tiles on `careers.html`, in this order. Real RJB event photos only — no stock. After adding a file, swap the tile's placeholder for an `<img>` with a real description as alt text (the exact line is in a comment above each tile in careers.html).
+
+| Filename | Width | Height | Ratio | Tile | Status |
+|---|---|---|---|---|---|
+| `culture-volunteer-pto.jpg` | 800px | 800px | 1:1 | Volunteer PTO | **needed** |
+| — | — | — | 1:1 | Habitat for Humanity | using `images/insights/insight-04.jpg` (swap to `culture-habitat-for-humanity.jpg` if a square-friendly shot is preferred) |
+| `culture-bring-your-kid-to-work-day.jpg` | 800px | 800px | 1:1 | Bring Your Kid to Work Day | **needed** |
+| `culture-women-in-construction.jpg` | 800px | 800px | 1:1 | Women in Construction Events | **needed** |
+| `culture-happy-hours.jpg` | 800px | 800px | 1:1 | Happy Hours | **needed** |
+| `culture-phillies-game.jpg` | 800px | 800px | 1:1 | Phillies Game | **needed** |
+| `culture-epc.jpg` | 800px | 800px | 1:1 | EPC | **needed** |
+| `culture-safety-committee.jpg` | 800px | 800px | 1:1 | Safety Committee | **needed** |
+| `culture-industry-education.jpg` | 800px | 800px | 1:1 | Industry Education Events | **needed** |
+
+Keep the main subject centered — the tiles crop to a square. Under 300KB each.
+
+---
+
 ## Tips
 
 - **Format:** JPG for photos, PNG only if you need transparency

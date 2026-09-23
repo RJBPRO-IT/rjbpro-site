@@ -17,7 +17,15 @@
         <img src="images/rjb-logo.png" alt="RJB Integrated Commercial Contractors" />
       </a>
       <div class="nav-links">
-                <a href="about-us.html">About Us</a>
+                <div class="nav-dropdown">
+          <a href="about-us.html" class="nav-dropdown-trigger">About Us <span class="nav-caret">▾</span></a>
+          <div class="nav-dropdown-menu">
+            <a href="about-us.html#our-story">Our Story</a>
+            <a href="about-us.html#how-we-work">How We Work</a>
+            <a href="about-us.html#leadership">Meet the Team</a>
+            <a href="about-us.html#safety">Safety</a>
+          </div>
+        </div>
         <div class="nav-dropdown">
           <a href="services.html" class="nav-dropdown-trigger">Services <span class="nav-caret">▾</span></a>
           <div class="nav-dropdown-menu">
@@ -54,8 +62,26 @@
     </div>
   </nav>
   <div class="nav-mobile" id="nav-mobile">
-    <a href="about-us.html">About Us</a>
-    <a href="services.html">Services</a>
+    <div class="nav-mobile-section-label"><a href="about-us.html">About Us</a></div>
+    <a href="about-us.html#our-story" class="nav-mobile-child">Our Story</a>
+    <a href="about-us.html#how-we-work" class="nav-mobile-child">How We Work</a>
+    <a href="about-us.html#leadership" class="nav-mobile-child">Meet the Team</a>
+    <a href="about-us.html#safety" class="nav-mobile-child">Safety</a>
+    <div class="nav-mobile-section-label"><a href="services.html">Services</a></div>
+    <a href="service-interior-fit-outs.html" class="nav-mobile-child">Interior Fit-Outs</a>
+    <a href="service-rollout-programs.html" class="nav-mobile-child">Rollout Programs</a>
+    <a href="service-store-remodels.html" class="nav-mobile-child">Store Remodels</a>
+    <a href="service-rebranding-programs.html" class="nav-mobile-child">Rebranding Programs</a>
+    <a href="service-eifs-coatings.html" class="nav-mobile-child">EIFS &amp; Coatings</a>
+    <a href="service-site-surveys.html" class="nav-mobile-child">Site Surveys</a>
+    <a href="service-specialized-solutions.html" class="nav-mobile-child">Specialized Solutions</a>
+    <div class="nav-mobile-section-label"><a href="sectors.html">Sectors</a></div>
+    <a href="sector-grocery.html" class="nav-mobile-child">Grocery</a>
+    <a href="sector-qsr.html" class="nav-mobile-child">QSR</a>
+    <a href="sector-retail.html" class="nav-mobile-child">Retail</a>
+    <a href="sector-warehouse.html" class="nav-mobile-child">Warehouse &amp; Distribution</a>
+    <a href="sector-sustainable-infrastructure.html" class="nav-mobile-child">Sustainable Infrastructure</a>
+    <a href="sector-healthcare.html" class="nav-mobile-child">Healthcare</a>
     <a href="projects.html">Projects</a>
     <a href="insights.html">Insights</a>
     <a href="careers.html">Careers</a>
@@ -191,6 +217,7 @@
     const toggle = document.getElementById('nav-toggle');
     const mobileNav = document.getElementById('nav-mobile');
     toggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
   </script>
 </body>
 </html>

@@ -24,7 +24,15 @@
         <img src="images/rjb-logo.png" alt="RJB Integrated Commercial Contractors" />
       </a>
       <div class="nav-links">
-                <a href="about-us.html">About Us</a>
+                <div class="nav-dropdown">
+          <a href="about-us.html" class="nav-dropdown-trigger">About Us <span class="nav-caret">▾</span></a>
+          <div class="nav-dropdown-menu">
+            <a href="about-us.html#our-story">Our Story</a>
+            <a href="about-us.html#how-we-work">How We Work</a>
+            <a href="about-us.html#leadership">Meet the Team</a>
+            <a href="about-us.html#safety">Safety</a>
+          </div>
+        </div>
         <div class="nav-dropdown">
           <a href="services.html" class="nav-dropdown-trigger">Services <span class="nav-caret">▾</span></a>
           <div class="nav-dropdown-menu">
@@ -63,7 +71,11 @@
 
   <!-- Mobile Nav -->
   <div class="nav-mobile" id="nav-mobile">
-    <a href="about-us.html">About Us</a>
+    <div class="nav-mobile-section-label"><a href="about-us.html">About Us</a></div>
+    <a href="about-us.html#our-story" class="nav-mobile-child">Our Story</a>
+    <a href="about-us.html#how-we-work" class="nav-mobile-child">How We Work</a>
+    <a href="about-us.html#leadership" class="nav-mobile-child">Meet the Team</a>
+    <a href="about-us.html#safety" class="nav-mobile-child">Safety</a>
     <div class="nav-mobile-section-label"><a href="services.html">Services</a></div>
     <a href="service-interior-fit-outs.html" class="nav-mobile-child">Interior Fit-Outs</a>
     <a href="service-rollout-programs.html" class="nav-mobile-child">Rollout Programs</a>
