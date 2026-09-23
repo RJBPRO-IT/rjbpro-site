@@ -179,7 +179,7 @@ Square tiles on `careers.html`, in this order. Real RJB event photos only — no
 | Filename | Width | Height | Ratio | Tile | Status |
 |---|---|---|---|---|---|
 | `culture-volunteer-pto.jpg` | 800px | 800px | 1:1 | Volunteer PTO | **needed** |
-| — | — | — | 1:1 | Habitat for Humanity | using `images/insights/insight-04.jpg` (swap to `culture-habitat-for-humanity.jpg` if a square-friendly shot is preferred) |
+| `culture-habitat-for-humanity.jpg` | 800px | 800px | 1:1 | Habitat for Humanity | **needed** — temporarily using `images/insights/insight-04.jpg` (crops the people at both ends; a square-friendly shot is better) |
 | `culture-bring-your-kid-to-work-day.jpg` | 800px | 800px | 1:1 | Bring Your Kid to Work Day | **needed** |
 | `culture-women-in-construction.jpg` | 800px | 800px | 1:1 | Women in Construction Events | **needed** |
 | `culture-happy-hours.jpg` | 800px | 800px | 1:1 | Happy Hours | **needed** |
