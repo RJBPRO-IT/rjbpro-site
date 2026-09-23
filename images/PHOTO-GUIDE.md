@@ -151,10 +151,10 @@ Each detail page has a photo gallery (click-to-enlarge lightbox). The galleries 
 | `insight-08.jpg` | 600px | 340px | 16:9 | Self-Checkout and Store Layouts card |
 | `insight-09.jpg` | 600px | 340px | 16:9 | Fire Safety During Commercial Renovations card (**needed**) |
 | `insight-10.jpg` | 600px | 340px | 16:9 | Retail Restroom Renovations card |
-| `insight-11.jpg` | 600px | 340px | 16:9 | Unassigned — available |
+| `insight-11.jpg` | 600px | 340px | 16:9 | Hidden Costs of Poor Construction Scheduling card |
 | `insight-12.jpg` | 600px | 340px | 16:9 | Commercial Protective Coatings card |
 | `insight-13.jpg` | 600px | 340px | 16:9 | Culture of Collaboration card |
-| `insight-14.jpg` | 600px | 340px | 16:9 | Hidden Costs of Poor Construction Scheduling card (**needed**) |
+| `insight-14.jpg` | 600px | 340px | 16:9 | Innovation in Commercial Construction card (**needed**) |
 
 ---
 
