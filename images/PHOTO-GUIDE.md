@@ -178,7 +178,7 @@ Square tiles on `careers.html`, in this order. Real RJB event photos only — no
 
 | Filename | Width | Height | Ratio | Tile | Status |
 |---|---|---|---|---|---|
-| `culture-volunteer-pto.jpg` | 800px | 800px | 1:1 | Volunteer PTO | added |
+| `culture-volunteer-pto.jpg` | 800px | 800px | 1:1 | Volunteer | added |
 | `culture-habitat-for-humanity.jpg` | 800px | 800px | 1:1 | Habitat for Humanity | added |
 | `culture-bring-your-kid-to-work-day.jpg` | 800px | 800px | 1:1 | Bring Your Kid to Work Day | added |
 | `culture-women-in-construction.jpg` | 800px | 800px | 1:1 | Women in Construction Events | added |
