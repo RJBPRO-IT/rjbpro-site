@@ -98,7 +98,7 @@ Drop your photos into this folder with the exact filenames below. The site will 
 | `project-04.jpg` | 600px | 450px | 4:3 | Projects grid — slot 4 |
 | `project-05.jpg` | 600px | 450px | 4:3 | Projects grid — slot 5 |
 | `project-06.jpg` | 600px | 450px | 4:3 | Projects grid — slot 6 |
-| `project-17.jpg` | 600px | 450px | 4:3 | Projects grid — Sheetz Survey Program (**needed**) |
+| `project-17.jpg` | 600px | 450px | 4:3 | Projects grid — Sheetz Survey Program |
 
 ---
 
@@ -114,7 +114,7 @@ Each project now has its own detail page (`project-01.html` … `project-06.html
 | `project-04-hero.jpg` | 1800px | 600px | 3:1 | project-04.html hero — National Coatings Program |
 | `project-05-hero.jpg` | 1800px | 600px | 3:1 | project-05.html hero — Convenience Store Rollout |
 | `project-06-hero.jpg` | 1800px | 600px | 3:1 | project-06.html hero — Fulfillment Center Build-Out |
-| `project-17-hero.jpg` | 1800px | 600px | 3:1 | project-17.html hero — Sheetz Survey Program (**needed**) |
+| `project-17-hero.jpg` | 1800px | 600px | 3:1 | project-17.html hero — Sheetz Survey Program |
 
 ---
 
@@ -149,12 +149,12 @@ Each detail page has a photo gallery (click-to-enlarge lightbox). The galleries 
 | `insight-06.jpg` | 600px | 340px | 16:9 | Insights card 6 |
 | `insight-07.jpg` | 600px | 340px | 16:9 | Biohazards on Site / Asbestos card |
 | `insight-08.jpg` | 600px | 340px | 16:9 | Self-Checkout and Store Layouts card |
-| `insight-09.jpg` | 600px | 340px | 16:9 | Fire Safety During Commercial Renovations card (**needed**) |
+| `insight-09.jpg` | 600px | 340px | 16:9 | Fire Safety During Commercial Renovations card |
 | `insight-10.jpg` | 600px | 340px | 16:9 | Retail Restroom Renovations card |
 | `insight-11.jpg` | 600px | 340px | 16:9 | Hidden Costs of Poor Construction Scheduling card |
 | `insight-12.jpg` | 600px | 340px | 16:9 | Commercial Protective Coatings card |
 | `insight-13.jpg` | 600px | 340px | 16:9 | Culture of Collaboration card |
-| `insight-14.jpg` | 600px | 340px | 16:9 | Innovation in Commercial Construction card (**needed**) |
+| `insight-14.jpg` | 600px | 340px | 16:9 | Innovation in Commercial Construction card |
 
 ---
 
@@ -174,19 +174,19 @@ Each detail page has a photo gallery (click-to-enlarge lightbox). The galleries 
 
 ## Careers — Life Beyond the Jobsite (JPG, folder: `images/culture/`)
 
-Square tiles on `careers.html`, in this order. Real RJB event photos only — no stock. After adding a file, swap the tile's placeholder for an `<img>` with a real description as alt text (the exact line is in a comment above each tile in careers.html).
+Square tiles on `careers.html`, in this order. Real RJB event photos only — no stock. To replace a photo, keep the same filename and tell Kaylah so the alt text in careers.html can be updated to match.
 
 | Filename | Width | Height | Ratio | Tile | Status |
 |---|---|---|---|---|---|
-| `culture-volunteer-pto.jpg` | 800px | 800px | 1:1 | Volunteer PTO | **needed** |
-| `culture-habitat-for-humanity.jpg` | 800px | 800px | 1:1 | Habitat for Humanity | **needed** — temporarily using `images/insights/insight-04.jpg` (crops the people at both ends; a square-friendly shot is better) |
-| `culture-bring-your-kid-to-work-day.jpg` | 800px | 800px | 1:1 | Bring Your Kid to Work Day | **needed** |
-| `culture-women-in-construction.jpg` | 800px | 800px | 1:1 | Women in Construction Events | **needed** |
-| `culture-happy-hours.jpg` | 800px | 800px | 1:1 | Happy Hours | **needed** |
-| `culture-phillies-game.jpg` | 800px | 800px | 1:1 | Phillies Game | **needed** |
-| `culture-epc.jpg` | 800px | 800px | 1:1 | EPC | **needed** |
-| `culture-safety-committee.jpg` | 800px | 800px | 1:1 | Safety Committee | **needed** |
-| `culture-industry-education.jpg` | 800px | 800px | 1:1 | Industry Education Events | **needed** |
+| `culture-volunteer-pto.jpg` | 800px | 800px | 1:1 | Volunteer PTO | added |
+| `culture-habitat-for-humanity.jpg` | 800px | 800px | 1:1 | Habitat for Humanity | added |
+| `culture-bring-your-kid-to-work-day.jpg` | 800px | 800px | 1:1 | Bring Your Kid to Work Day | added |
+| `culture-women-in-construction.jpg` | 800px | 800px | 1:1 | Women in Construction Events | added |
+| `culture-happy-hours.jpg` | 800px | 800px | 1:1 | Happy Hours | added |
+| `culture-phillies-game.jpg` | 800px | 800px | 1:1 | Phillies Game | added |
+| `culture-epc.jpg` | 800px | 800px | 1:1 | EPC | added |
+| `culture-safety-committee.jpg` | 800px | 800px | 1:1 | Safety Committee | added |
+| `culture-industry-education.jpg` | 800px | 800px | 1:1 | Industry Education Events | added |
 
 Keep the main subject centered — the tiles crop to a square. Under 300KB each.
 
