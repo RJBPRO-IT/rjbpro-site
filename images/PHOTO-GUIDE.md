@@ -150,7 +150,11 @@ Each detail page has a photo gallery (click-to-enlarge lightbox). The galleries 
 | `insight-07.jpg` | 600px | 340px | 16:9 | Biohazards on Site / Asbestos card |
 | `insight-08.jpg` | 600px | 340px | 16:9 | Self-Checkout and Store Layouts card |
 | `insight-09.jpg` | 600px | 340px | 16:9 | Fire Safety During Commercial Renovations card (**needed**) |
-| `insight-10.jpg` | 600px | 340px | 16:9 | Retail Restroom Renovations card (**needed**) |
+| `insight-10.jpg` | 600px | 340px | 16:9 | Retail Restroom Renovations card |
+| `insight-11.jpg` | 600px | 340px | 16:9 | Hidden Costs of Poor Construction Scheduling card |
+| `insight-12.jpg` | 600px | 340px | 16:9 | Commercial Protective Coatings card |
+| `insight-13.jpg` | 600px | 340px | 16:9 | Culture of Collaboration card |
+| `insight-14.jpg` | 600px | 340px | 16:9 | Innovation in Commercial Construction card (**needed**) |
 
 ---
 
@@ -165,6 +169,26 @@ Each detail page has a photo gallery (click-to-enlarge lightbox). The galleries 
 | `misc-teamwork.jpg` | 600px | 500px | 6:5 | Team / people photo |
 | `misc-family.jpg` | 600px | 500px | 6:5 | Family / leadership photo |
 | `misc-subcontractor.jpg` | 600px | 500px | 6:5 | Subcontractors page |
+
+---
+
+## Careers — Life Beyond the Jobsite (JPG, folder: `images/culture/`)
+
+Square tiles on `careers.html`, in this order. Real RJB event photos only — no stock. After adding a file, swap the tile's placeholder for an `<img>` with a real description as alt text (the exact line is in a comment above each tile in careers.html).
+
+| Filename | Width | Height | Ratio | Tile | Status |
+|---|---|---|---|---|---|
+| `culture-volunteer-pto.jpg` | 800px | 800px | 1:1 | Volunteer PTO | **needed** |
+| `culture-habitat-for-humanity.jpg` | 800px | 800px | 1:1 | Habitat for Humanity | **needed** — temporarily using `images/insights/insight-04.jpg` (crops the people at both ends; a square-friendly shot is better) |
+| `culture-bring-your-kid-to-work-day.jpg` | 800px | 800px | 1:1 | Bring Your Kid to Work Day | **needed** |
+| `culture-women-in-construction.jpg` | 800px | 800px | 1:1 | Women in Construction Events | **needed** |
+| `culture-happy-hours.jpg` | 800px | 800px | 1:1 | Happy Hours | **needed** |
+| `culture-phillies-game.jpg` | 800px | 800px | 1:1 | Phillies Game | **needed** |
+| `culture-epc.jpg` | 800px | 800px | 1:1 | EPC | **needed** |
+| `culture-safety-committee.jpg` | 800px | 800px | 1:1 | Safety Committee | **needed** |
+| `culture-industry-education.jpg` | 800px | 800px | 1:1 | Industry Education Events | **needed** |
+
+Keep the main subject centered — the tiles crop to a square. Under 300KB each.
 
 ---
 

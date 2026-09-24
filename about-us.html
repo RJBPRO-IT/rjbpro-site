@@ -17,7 +17,15 @@
         <img src="images/rjb-logo.png" alt="RJB Integrated Commercial Contractors" />
       </a>
       <div class="nav-links">
-                <a href="about-us.html">About Us</a>
+                <div class="nav-dropdown">
+          <a href="about-us.html" class="nav-dropdown-trigger">About Us <span class="nav-caret">▾</span></a>
+          <div class="nav-dropdown-menu">
+            <a href="about-us.html#our-story">Our Story</a>
+            <a href="about-us.html#how-we-work">How We Work</a>
+            <a href="about-us.html#leadership">Meet the Team</a>
+            <a href="about-us.html#safety">Safety</a>
+          </div>
+        </div>
         <div class="nav-dropdown">
           <a href="services.html" class="nav-dropdown-trigger">Services <span class="nav-caret">▾</span></a>
           <div class="nav-dropdown-menu">
@@ -54,8 +62,26 @@
     </div>
   </nav>
   <div class="nav-mobile" id="nav-mobile">
-    <a href="about-us.html">About Us</a>
-    <a href="services.html">Services</a>
+    <div class="nav-mobile-section-label"><a href="about-us.html">About Us</a></div>
+    <a href="about-us.html#our-story" class="nav-mobile-child">Our Story</a>
+    <a href="about-us.html#how-we-work" class="nav-mobile-child">How We Work</a>
+    <a href="about-us.html#leadership" class="nav-mobile-child">Meet the Team</a>
+    <a href="about-us.html#safety" class="nav-mobile-child">Safety</a>
+    <div class="nav-mobile-section-label"><a href="services.html">Services</a></div>
+    <a href="service-interior-fit-outs.html" class="nav-mobile-child">Interior Fit-Outs</a>
+    <a href="service-rollout-programs.html" class="nav-mobile-child">Rollout Programs</a>
+    <a href="service-store-remodels.html" class="nav-mobile-child">Store Remodels</a>
+    <a href="service-rebranding-programs.html" class="nav-mobile-child">Rebranding Programs</a>
+    <a href="service-eifs-coatings.html" class="nav-mobile-child">EIFS &amp; Coatings</a>
+    <a href="service-site-surveys.html" class="nav-mobile-child">Site Surveys</a>
+    <a href="service-specialized-solutions.html" class="nav-mobile-child">Specialized Solutions</a>
+    <div class="nav-mobile-section-label"><a href="sectors.html">Sectors</a></div>
+    <a href="sector-grocery.html" class="nav-mobile-child">Grocery</a>
+    <a href="sector-qsr.html" class="nav-mobile-child">QSR</a>
+    <a href="sector-retail.html" class="nav-mobile-child">Retail</a>
+    <a href="sector-warehouse.html" class="nav-mobile-child">Warehouse &amp; Distribution</a>
+    <a href="sector-sustainable-infrastructure.html" class="nav-mobile-child">Sustainable Infrastructure</a>
+    <a href="sector-healthcare.html" class="nav-mobile-child">Healthcare</a>
     <a href="projects.html">Projects</a>
     <a href="insights.html">Insights</a>
     <a href="careers.html">Careers</a>
@@ -76,22 +102,21 @@
   <nav class="page-subnav" id="page-subnav" aria-label="Page sections">
     <div class="page-subnav-inner">
       <a href="#our-story" class="page-subnav-link">Our Story</a>
-      <a href="#history" class="page-subnav-link">History</a>
       <a href="#how-we-work" class="page-subnav-link">How We Work</a>
       <a href="#leadership" class="page-subnav-link">Meet the Team</a>
       <a href="#safety" class="page-subnav-link">Safety</a>
     </div>
   </nav>
 
-  <!-- OUR STORY -->
+  <!-- OUR STORY (combined Our Story + History, Sept 2026).
+       #history is kept as an anchor on the timeline so old links still land in the right place. -->
   <section class="content-section" id="our-story">
     <div class="content-inner">
       <div class="content-text story-intro">
           <div class="section-label">Our Story</div>
           <h2 class="t-section-head">From one trade to one accountable partner</h2>
-          <p class="t-body">Ron Bacskai founded RJB in 1992 outside Philadelphia as a commercial coatings contractor. The work was simple: show up, do it right, stand behind it. That standard hasn't changed.</p>
-          <p class="t-body">As national brands trusted RJB with more of their facilities, the scope grew. Clients wanted one accountable partner, not multiple contractors. RJB added drywall, carpentry, and fixturing until it became the full-service general contractor it is today, now operating across 48 states.</p>
-          <p class="t-body">What hasn't changed is who owns it. Ron started RJB thinking about the next job, not an exit strategy. That mindset carries through every decision. Today the second generation of the Bacskai family is part of the business. Family ownership means we answer to our clients and our team, not to a corporate mandate. That freedom lets us do the right thing, every time.</p>
+          <p class="t-body">RJB started in 1992 with one trade and one standard: show up, do it right, stand behind it. The scope and the footprint have grown a lot since then. The standard hasn't changed.</p>
+          <p class="t-body">What also hasn't changed is who owns it. Ron Bacskai started RJB thinking about the next job, not an exit strategy. That mindset carries through every decision. Today the second generation of the Bacskai family is part of the business. Family ownership means we answer to our clients and our team, not to a corporate mandate. That freedom lets us do the right thing, every time.</p>
           <a href="contact-us.html" class="btn btn-orange btn-arrow" style="margin-top:1.5rem;">Start a Project</a>
       </div>
 
@@ -104,41 +129,38 @@
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen></iframe>
       </div>
-    </div>
-  </section>
 
-  <!-- TIMELINE -->
-  <section class="content-section content-section--gray" id="history">
-    <div class="content-inner">
-      <div class="section-label">Three Decades of Showing Up</div>
-      <h2 class="t-section-head" style="margin-bottom:3rem;">The same standard, at every scale</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-year">1992</div>
-          <div>
-            <div class="timeline-title">Founded</div>
-            <div class="timeline-desc">RJB opens outside Philadelphia as a specialized commercial coatings contractor. One trade, one standard, one family behind every job.</div>
+      <div class="story-history" id="history">
+        <div class="section-label">Three Decades of Showing Up</div>
+        <h3 class="t-section-head story-history-head">The same standard, at every scale</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1992</div>
+            <div>
+              <div class="timeline-title">Founded</div>
+              <div class="timeline-desc">Ron Bacskai opens RJB outside Philadelphia as a specialized commercial coatings contractor. One trade, one standard, one family behind every job.</div>
+            </div>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2000s</div>
-          <div>
-            <div class="timeline-title">Becoming a GC</div>
-            <div class="timeline-desc">Client demand pulls RJB into drywall, carpentry, fixturing, and full interior construction. The one-trade company becomes a full general contractor without losing the accountability that built its reputation.</div>
+          <div class="timeline-item">
+            <div class="timeline-year">2000s</div>
+            <div>
+              <div class="timeline-title">Becoming a GC</div>
+              <div class="timeline-desc">Clients wanted one accountable partner, not multiple contractors. RJB added drywall, carpentry, fixturing, and full interior construction, becoming a full general contractor without losing the accountability that built its reputation.</div>
+            </div>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2010s</div>
-          <div>
-            <div class="timeline-title">Going National</div>
-            <div class="timeline-desc">Fortune 500 retail programs take RJB coast to coast, building the vendor network, field organization, and systems to execute at national portfolio scale.</div>
+          <div class="timeline-item">
+            <div class="timeline-year">2010s</div>
+            <div>
+              <div class="timeline-title">Going National</div>
+              <div class="timeline-desc">Fortune 500 retail programs take RJB coast to coast, building the vendor network, field organization, and systems to execute at national portfolio scale.</div>
+            </div>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">Today</div>
-          <div>
-            <div class="timeline-title">48 States &amp; Counting</div>
-            <div class="timeline-desc">A national footprint, deep trade expertise, and the second generation of the Bacskai family carrying forward the standard that started it all.</div>
+          <div class="timeline-item">
+            <div class="timeline-year">Today</div>
+            <div>
+              <div class="timeline-title">48 States &amp; Counting</div>
+              <div class="timeline-desc">A full-service general contractor operating across 48 states, with deep trade expertise and the same standard that started it all.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -237,6 +259,12 @@
         </div>
       </div>
       <!-- TEAM:END -->
+
+      <!-- Culture link to Careers > Life at RJB (outside the TEAM markers so the generator won't touch it) -->
+      <div class="team-culture-cta">
+        <p class="t-body">The people behind our projects are what make RJB work. Get to know how our team connects, grows, and gives back beyond the jobsite.</p>
+        <a href="careers.html#life-at-rjb" class="btn btn-orange btn-arrow">Explore Life at RJB</a>
+      </div>
     </div>
   </section>
 
@@ -315,6 +343,7 @@
     const toggle = document.getElementById('nav-toggle');
     const mobileNav = document.getElementById('nav-mobile');
     toggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
 
     // Sub-nav active section highlighting
     (function () {
