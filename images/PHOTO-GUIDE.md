@@ -184,7 +184,7 @@ Square tiles on `careers.html`, in this order. Real RJB event photos only — no
 | `culture-women-in-construction.jpg` | 800px | 800px | 1:1 | Women in Construction Events | added |
 | `culture-happy-hours.jpg` | 800px | 800px | 1:1 | Happy Hours | added |
 | `culture-phillies-game.jpg` | 800px | 800px | 1:1 | Phillies Game | added |
-| `culture-epc.jpg` | 800px | 800px | 1:1 | EPC | added |
+| `culture-epc.jpg` | 800px | 800px | 1:1 | Event Planning Committee | added |
 | `culture-safety-committee.jpg` | 800px | 800px | 1:1 | Safety Committee | added |
 | `culture-industry-education.jpg` | 800px | 800px | 1:1 | Industry Education Events | added |
 
