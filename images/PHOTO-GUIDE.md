@@ -155,6 +155,7 @@ Each detail page has a photo gallery (click-to-enlarge lightbox). The galleries 
 | `insight-12.jpg` | 600px | 340px | 16:9 | Commercial Protective Coatings card |
 | `insight-13.jpg` | 600px | 340px | 16:9 | Culture of Collaboration card |
 | `insight-14.jpg` | 600px | 340px | 16:9 | Innovation in Commercial Construction card |
+| `insight-17.jpg` | 600px | 340px | 16:9 | A Night at the Ballpark With the RJB Team (Phillies culture post) card |
 
 ---
 
