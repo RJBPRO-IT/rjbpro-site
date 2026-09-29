@@ -2,7 +2,7 @@
 title: Beyond the Job Site: RJB in the Community
 slug: rjb-in-the-community
 date: 2026-03-10
-tag: Community
+tag: Culture
 author: RJB Contracting
 excerpt: Giving back is part of building something bigger than a building. Here's how the RJB team shows up in the communities where they live and work.
 image: images/insights/rjb-in-the-community.jpg
