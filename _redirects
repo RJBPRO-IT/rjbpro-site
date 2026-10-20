@@ -29,12 +29,48 @@
 /sustainable-infrastructure    /sector-sustainable-infrastructure   301
 
 # --- Projects with confirmed new-site equivalents ---
-/project/t-mobile-store-remodels/      /project-01   301
-/project/kohls-self-checkout-install/  /project-02   301
-/project/petsmart-store-refresh-remodels-rjb-contracting/  /project-03   301
-/project/auntie-annes-fit-out/         /project-04   301
-/project/weis-remodel/                 /project-05   301
-/project/tesla-supercharger-stations/  /project-06   301
+/project/t-mobile-store-remodels/      /project-t-mobile-store-remodel   301
+/project/kohls-self-checkout-install/  /project-kohls-queue-line   301
+/project/petsmart-store-refresh-remodels-rjb-contracting/  /project-petsmart-fish-tank-program   301
+/project/auntie-annes-fit-out/         /project-auntie-annes-fit-out   301
+/project/weis-remodel/                 /project-weis-markets-remodel   301
+/project/tesla-supercharger-stations/  /project-tesla-charger-installation   301
+
+# --- Project pages renamed to descriptive URLs (Oct 2026) ---
+/project-01        /project-t-mobile-store-remodel   301
+/project-01.html   /project-t-mobile-store-remodel   301
+/project-02        /project-kohls-queue-line   301
+/project-02.html   /project-kohls-queue-line   301
+/project-03        /project-petsmart-fish-tank-program   301
+/project-03.html   /project-petsmart-fish-tank-program   301
+/project-04        /project-auntie-annes-fit-out   301
+/project-04.html   /project-auntie-annes-fit-out   301
+/project-05        /project-weis-markets-remodel   301
+/project-05.html   /project-weis-markets-remodel   301
+/project-06        /project-tesla-charger-installation   301
+/project-06.html   /project-tesla-charger-installation   301
+/project-07        /project-home-depot-restroom-remodel   301
+/project-07.html   /project-home-depot-restroom-remodel   301
+/project-08        /project-target-vandal-glass   301
+/project-08.html   /project-target-vandal-glass   301
+/project-09        /project-panera-bread-store-refreshes   301
+/project-09.html   /project-panera-bread-store-refreshes   301
+/project-10        /project-amazon-warehouse-remodel   301
+/project-10.html   /project-amazon-warehouse-remodel   301
+/project-11        /project-sams-club-exterior-repaint   301
+/project-11.html   /project-sams-club-exterior-repaint   301
+/project-12        /project-lowes-restroom-remodels   301
+/project-12.html   /project-lowes-restroom-remodels   301
+/project-13        /project-hair-cuttery-fit-out   301
+/project-13.html   /project-hair-cuttery-fit-out   301
+/project-14        /project-savers-store-conversions   301
+/project-14.html   /project-savers-store-conversions   301
+/project-15        /project-bobs-discount-furniture-fit-out   301
+/project-15.html   /project-bobs-discount-furniture-fit-out   301
+/project-16        /project-hannaford-store-remodel   301
+/project-16.html   /project-hannaford-store-remodel   301
+/project-17        /project-sheetz-survey-program   301
+/project-17.html   /project-sheetz-survey-program   301
 
 # --- All other WordPress project pages -> projects index ---
 /project/*            /projects              301
