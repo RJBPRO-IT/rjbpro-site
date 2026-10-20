@@ -23,9 +23,9 @@ body_new = '''<!-- 404 -->
       <p class="t-body" style="font-size:1.1rem;">The link may be out of date, or the address may have a typo. Some pages moved when we rebuilt our site.</p>
       <p class="t-body">Start from the homepage, or reach out and we'll point you in the right direction.</p>
       <div style="margin-top:2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="index.html" class="btn btn-orange btn-arrow">Back to Home</a>
-        <a href="projects.html" class="btn btn-outline">See Our Projects</a>
-        <a href="contact-us.html" class="btn btn-outline">Contact Us</a>
+        <a href="/" class="btn btn-orange btn-arrow">Back to Home</a>
+        <a href="/projects" class="btn btn-outline">See Our Projects</a>
+        <a href="/contact-us" class="btn btn-outline">Contact Us</a>
       </div>
     </div>
   </section>'''

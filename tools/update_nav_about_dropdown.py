@@ -17,33 +17,33 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 ABOUT_ITEMS = [
-    ('about-us.html#our-story',   'Our Story'),
-    ('about-us.html#how-we-work', 'How We Work'),
-    ('about-us.html#leadership',  'Meet the Team'),
-    ('about-us.html#safety',      'Safety'),
+    ('/about-us#our-story',   'Our Story'),
+    ('/about-us#how-we-work', 'How We Work'),
+    ('/about-us#leadership',  'Meet the Team'),
+    ('/about-us#safety',      'Safety'),
 ]
 SERVICES = [
-    ('service-interior-fit-outs.html', 'Interior Fit-Outs'),
-    ('service-rollout-programs.html', 'Rollout Programs'),
-    ('service-store-remodels.html', 'Store Remodels'),
-    ('service-rebranding-programs.html', 'Rebranding Programs'),
-    ('service-eifs-coatings.html', 'EIFS &amp; Coatings'),
-    ('service-site-surveys.html', 'Site Surveys'),
-    ('service-specialized-solutions.html', 'Specialized Solutions'),
+    ('/service-interior-fit-outs', 'Interior Fit-Outs'),
+    ('/service-rollout-programs', 'Rollout Programs'),
+    ('/service-store-remodels', 'Store Remodels'),
+    ('/service-rebranding-programs', 'Rebranding Programs'),
+    ('/service-eifs-coatings', 'EIFS &amp; Coatings'),
+    ('/service-site-surveys', 'Site Surveys'),
+    ('/service-specialized-solutions', 'Specialized Solutions'),
 ]
 SECTORS = [
-    ('sector-grocery.html', 'Grocery'),
-    ('sector-qsr.html', 'QSR'),
-    ('sector-retail.html', 'Retail'),
-    ('sector-warehouse.html', 'Warehouse &amp; Distribution'),
-    ('sector-sustainable-infrastructure.html', 'Sustainable Infrastructure'),
-    ('sector-healthcare.html', 'Healthcare'),
+    ('/sector-grocery', 'Grocery'),
+    ('/sector-qsr', 'QSR'),
+    ('/sector-retail', 'Retail'),
+    ('/sector-warehouse', 'Warehouse &amp; Distribution'),
+    ('/sector-sustainable-infrastructure', 'Sustainable Infrastructure'),
+    ('/sector-healthcare', 'Healthcare'),
 ]
 
 def desktop_about(caret):
     items = '\n'.join(f'            <a href="{h}">{t}</a>' for h, t in ABOUT_ITEMS)
     return ('<div class="nav-dropdown">\n'
-            f'          <a href="about-us.html" class="nav-dropdown-trigger">About Us <span class="nav-caret">{caret}</span></a>\n'
+            f'          <a href="/about-us" class="nav-dropdown-trigger">About Us <span class="nav-caret">{caret}</span></a>\n'
             '          <div class="nav-dropdown-menu">\n'
             f'{items}\n'
             '          </div>\n'
@@ -55,12 +55,12 @@ def mobile_block():
         L.append(f'    <div class="nav-mobile-section-label"><a href="{href}">{label}</a></div>')
         for h, t in kids:
             L.append(f'    <a href="{h}" class="nav-mobile-child">{t}</a>')
-    group('about-us.html', 'About Us', ABOUT_ITEMS)
-    group('services.html', 'Services', SERVICES)
-    group('sectors.html', 'Sectors', SECTORS)
-    for h, t in [('projects.html', 'Projects'), ('insights.html', 'Insights'), ('careers.html', 'Careers')]:
+    group('/about-us', 'About Us', ABOUT_ITEMS)
+    group('/services', 'Services', SERVICES)
+    group('/sectors', 'Sectors', SECTORS)
+    for h, t in [('/projects', 'Projects'), ('/insights', 'Insights'), ('/careers', 'Careers')]:
         L.append(f'    <a href="{h}">{t}</a>')
-    L.append('    <a href="contact-us.html" class="btn btn-orange" style="margin-top:1rem;align-self:flex-start;">Start a Project</a>')
+    L.append('    <a href="/contact-us" class="btn btn-orange" style="margin-top:1rem;align-self:flex-start;">Start a Project</a>')
     L.append('  </div>')
     return '\n'.join(L)
 
@@ -69,7 +69,7 @@ NEW_TOGGLE = (OLD_TOGGLE + "\n    mobileNav.querySelectorAll('a').forEach(a => "
               "a.addEventListener('click', () => mobileNav.classList.remove('open')));")
 
 # Desktop: plain About Us link immediately inside .nav-links
-RE_DESKTOP = re.compile(r'(<div class="nav-links">\s*)<a href="about-us\.html">About Us</a>')
+RE_DESKTOP = re.compile(r'(<div class="nav-links">\s*)<a href="/?about-us(?:\.html)?">About Us</a>')
 # Mobile: whole block up to the Start a Project button's closing </div>
 RE_MOBILE = re.compile(r'[ \t]*<div class="nav-mobile" id="nav-mobile">.*?Start a Project</a>\s*</div>', re.S)
 
@@ -80,7 +80,7 @@ for f in sorted(ROOT.glob('*.html')):
     caret = '&#9662;' if 'nav-caret">&#9662;' in s else '▾'
     if RE_DESKTOP.search(s):
         s = RE_DESKTOP.sub(lambda m: m.group(1) + desktop_about(caret), s, count=1)
-    elif 'about-us.html" class="nav-dropdown-trigger"' not in s:
+    elif 'about-us.html" class="nav-dropdown-trigger"' not in s and '/about-us" class="nav-dropdown-trigger"' not in s:
         problems.append(f'{f.name}: desktop About Us link not found')
     if RE_MOBILE.search(s):
         s = RE_MOBILE.sub(lambda m: mobile_block(), s, count=1)

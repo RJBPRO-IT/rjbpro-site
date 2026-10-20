@@ -108,7 +108,7 @@ def card_html(p, indent="        "):
         img = (f'<div class="insight-card-img insight-card-img--empty">'
                f'<span>{esc(p["tag"])}</span></div>')
     return (
-        f'{indent}<a class="insight-card" href="insight-{p["slug"]}.html">\n'
+        f'{indent}<a class="insight-card" href="/insight-{p["slug"]}">\n'
         f'{indent}  {img}\n'
         f'{indent}  <div class="insight-card-body">\n'
         f'{indent}    <div class="insight-tag">{esc(p["tag"])}</div>\n'
@@ -154,7 +154,7 @@ def article_page(p, nav, footer):
       <article class="article-body">
 {p['body_html']}
       </article>
-      <a href="insights.html" class="insight-link" style="display:inline-block;margin-top:2.5rem;">&larr; Back to Insights</a>
+      <a href="/insights" class="insight-link" style="display:inline-block;margin-top:2.5rem;">&larr; Back to Insights</a>
     </div>
   </section>
 

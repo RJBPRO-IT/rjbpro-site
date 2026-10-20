@@ -13,7 +13,7 @@ footer that has no Company column) are left untouched and counted separately.
 import re
 from pathlib import Path
 
-LINK = '<li><a href="privacy-policy.html">Privacy Policy</a></li>'
+LINK = '<li><a href="/privacy-policy">Privacy Policy</a></li>'
 ROOT = Path(__file__).resolve().parent.parent
 
 # The Company column of the standard footer: <h4>Company</h4> then its <ul>.
@@ -28,7 +28,7 @@ def process(path):
     m = COMPANY_UL.search(text)
     if not m:
         return "no-company-col"
-    if "privacy-policy.html" in m.group(2):
+    if "privacy-policy" in m.group(2):
         return "already-linked"
     items = m.group(2)
     ind = re.search(r"\n(\s*)<li>", items)
