@@ -22,6 +22,11 @@
     }
     .project-filter:hover { border-color: var(--navy); }
     .project-filter.is-active { background: var(--orange); border-color: var(--orange); color: var(--white); }
+    /* Equal-height project cards: every row matches the tallest card,
+       and photos line up along the bottom. */
+    .projects-grid { grid-auto-rows: 1fr; }
+    .projects-grid a.project-card { display: flex; flex-direction: column; height: 100%; }
+    .projects-grid .project-info { flex: 1; }
   </style>
 </head>
 <body style="padding-top:var(--nav-h);">
@@ -121,6 +126,7 @@
           <div class="project-info">
             <div class="project-cat">Specialized Solutions</div>
             <div class="project-name">Sheetz Survey Program</div>
+            <div class="project-loc">More than 700 locations surveyed in three months.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-17.jpg" alt="Sheetz Survey Program" class="project-img" loading="lazy" />
@@ -130,6 +136,7 @@
           <div class="project-info">
             <div class="project-cat">Interior Fit-Outs</div>
             <div class="project-name">T-Mobile Store Remodel</div>
+            <div class="project-loc">An ongoing remodel program covering 10 to 20 stores a year.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-01.jpg" alt="T-Mobile Store Remodel" class="project-img" loading="lazy" />
@@ -139,6 +146,7 @@
           <div class="project-info">
             <div class="project-cat">Rollout Programs</div>
             <div class="project-name">Kohl's Queue Line</div>
+            <div class="project-loc">Self-checkout registers and new power for queue-line refresh stations, store after store.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-02.jpg" alt="Kohl's Queue Line" class="project-img" loading="lazy" />
@@ -148,6 +156,7 @@
           <div class="project-info">
             <div class="project-cat">Rollout Programs</div>
             <div class="project-name">PetSmart Fish Tank Program</div>
+            <div class="project-loc">Overnight store refreshes, each finished in five nights while the store stayed open.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-03.jpg" alt="PetSmart Fish Tank Program" class="project-img" loading="lazy" />
@@ -157,6 +166,7 @@
           <div class="project-info">
             <div class="project-cat">Interior Fit-Outs</div>
             <div class="project-name">Auntie Anne's Fit-Out</div>
+            <div class="project-loc">Full interior fit-out for Applegreen, from demolition to open-ready in four weeks.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-04.jpg" alt="Auntie Anne's Fit-Out" class="project-img" loading="lazy" />
@@ -166,6 +176,7 @@
           <div class="project-info">
             <div class="project-cat">Store Remodels</div>
             <div class="project-name">Weis Markets Remodel</div>
+            <div class="project-loc">Grocery remodels of the departments customers use most, about two months per store.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-05.jpg" alt="Weis Markets Remodel" class="project-img" loading="lazy" />
@@ -175,6 +186,7 @@
           <div class="project-info">
             <div class="project-cat">Specialized Solutions</div>
             <div class="project-name">Tesla Charger Installation</div>
+            <div class="project-loc">V3 EV charging stations across the Northeast, 8 to 20 chargers per site.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-06.jpg" alt="Tesla Charger Installation" class="project-img" loading="lazy" />
@@ -184,6 +196,7 @@
           <div class="project-info">
             <div class="project-cat">Store Remodels</div>
             <div class="project-name">The Home Depot Restroom Remodel</div>
+            <div class="project-loc">A full restroom renovation, from demolition to reopening in 7 days.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-07.jpg" alt="The Home Depot Restroom Remodel" class="project-img" loading="lazy" />
@@ -193,6 +206,7 @@
           <div class="project-info">
             <div class="project-cat">Specialized Solutions</div>
             <div class="project-name">Target Vandal Glass Installation</div>
+            <div class="project-loc">Vandal-resistant glass installed and replaced at Target stores nationwide.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-08.jpg" alt="Target Vandal Glass Installation" class="project-img" loading="lazy" />
@@ -202,15 +216,17 @@
           <div class="project-info">
             <div class="project-cat">Rollout Programs</div>
             <div class="project-name">Panera Bread Store Refreshes</div>
+            <div class="project-loc">20 to 30 stores a year brought to current brand standards, working overnight.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-09.jpg" alt="Panera Bread Store Refreshes" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="/project-amazon-warehouse-remodel" data-service="Specialized Solutions">
+        <a class="project-card" href="/project-amazon-warehouse-remodel" data-service="Store Remodels">
           <div class="project-info">
-            <div class="project-cat">Specialized Solutions</div>
+            <div class="project-cat">Store Remodels</div>
             <div class="project-name">Amazon Warehouse Remodel</div>
+            <div class="project-loc">A 120,000 sq. ft. warehouse renovation in Delaware, plus a 12,000 sq. ft. addition.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-10.jpg" alt="Amazon Warehouse Remodel" class="project-img" loading="lazy" />
@@ -220,6 +236,7 @@
           <div class="project-info">
             <div class="project-cat">EIFS &amp; Coatings</div>
             <div class="project-name">Sam's Club Exterior Repaint</div>
+            <div class="project-loc">Exterior repaints nationwide, including a full conversion to Sam's updated colors.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-11.jpg" alt="Sam's Club Exterior Repaint" class="project-img" loading="lazy" />
@@ -229,6 +246,7 @@
           <div class="project-info">
             <div class="project-cat">Rollout Programs</div>
             <div class="project-name">Lowe's Restroom Remodels</div>
+            <div class="project-loc">A 5+ year program rebuilding restrooms to Lowe's current brand standard.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-12.jpg" alt="Lowe's Restroom Remodels" class="project-img" loading="lazy" />
@@ -238,6 +256,7 @@
           <div class="project-info">
             <div class="project-cat">Interior Fit-Outs</div>
             <div class="project-name">Hair Cuttery Fit-Out</div>
+            <div class="project-loc">A 1,400 sq. ft. tenant fit-out in Lancaster, PA.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-13.jpg" alt="Hair Cuttery Fit-Out" class="project-img" loading="lazy" />
@@ -247,6 +266,7 @@
           <div class="project-info">
             <div class="project-cat">Interior Fit-Outs</div>
             <div class="project-name">Savers Store Conversion Program</div>
+            <div class="project-loc">Vacant big-box spaces rebuilt into new Savers stores, about 34,000 sq. ft. each.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-14.jpg" alt="Savers Store Conversion Program" class="project-img" loading="lazy" />
@@ -256,6 +276,7 @@
           <div class="project-info">
             <div class="project-cat">Interior Fit-Outs</div>
             <div class="project-name">Bob's Discount Furniture Fit-Out</div>
+            <div class="project-loc">A 37,000 sq. ft. shell rebuilt into a new showroom in Catonsville, MD.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-15.jpg" alt="Bob's Discount Furniture Fit-Out" class="project-img" loading="lazy" />
@@ -265,6 +286,7 @@
           <div class="project-info">
             <div class="project-cat">Store Remodels</div>
             <div class="project-name">Hannaford Store Remodel</div>
+            <div class="project-loc">A full remodel of a 38,000 sq. ft. supermarket and pharmacy in Meredith, NH.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-16.jpg" alt="Hannaford Store Remodel" class="project-img" loading="lazy" />
