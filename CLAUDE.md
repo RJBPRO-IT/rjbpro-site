@@ -5,11 +5,12 @@ Project context for Claude. If you're working in this folder, read this first. I
 ---
 
 ## What this is
-A static HTML/CSS/JS website for RJB Contracting, a national integrated commercial contractor in Spring City, PA, founded 1992. Visual style is modeled on Turner Construction — full-width heroes, large type, photo cards, clean sections. Self-maintained, hosted on GitHub Pages.
+A static HTML/CSS/JS website for RJB Contracting, a national integrated commercial contractor in Spring City, PA, founded 1992. Visual style is modeled on Turner Construction — full-width heroes, large type, photo cards, clean sections. Self-maintained. Code lives on GitHub; the live site is served by **Cloudflare Pages**.
 
 - **Repo:** `github.com/RJBPRO-IT/rjbpro-site` (private)
-- **Live URL:** https://rjbpro-it.github.io/rjbpro-site/ (custom domain rjbpro.com is **pending** — not connected yet)
-- **Deploys** automatically from the `main` branch, ~1 minute after a push.
+- **Live URL:** https://rjbpro.com (Cloudflare Pages; rjbcontracting.net and www redirect here)
+- **Deploys** automatically from the `main` branch, ~1–2 minutes after a push. Cloudflare can cache old copies — if a change doesn't show, ask Mike to purge the cache.
+- **Publish from GitHub Desktop** (commit → Push origin). `deploy.sh` also works; it no longer runs the blog generator.
 
 ---
 
@@ -57,7 +58,7 @@ Plain HTML, CSS, JS — no framework, no build tools, no npm. CSS custom propert
 - **Main:** index, about-us, services, sectors, projects, insights, careers, contact-us, subcontractors.
 - **Services (7):** service-interior-fit-outs, -rollout-programs, -store-remodels, -rebranding-programs, -eifs-coatings, -site-surveys, -specialized-solutions.
 - **Sectors (6):** sector-grocery, -qsr, -retail, -warehouse, -sustainable-infrastructure, -healthcare.
-- **Project detail pages (6):** project-01 … project-06 (linked from `projects.html`).
+- **Project detail pages (17):** descriptive names, e.g. `project-kohls-queue-line`, `project-t-mobile-store-remodel` (linked from `projects.html`). Renamed from project-01…17 in Oct 2026; old addresses 301 to the new ones via `_redirects`. Photos keep their numbered names (`images/project-photos/project-02.jpg`, `project-02-gallery-1.jpg`) — the old-number → new-name map is in `tools/rename_project_pages.py`.
 - **Insights posts:** several `insight-*.html`.
 - **Legacy (kept but unlinked from nav/footer):** retail-construction, warehouse-construction, asset-maintenance.
 
@@ -82,10 +83,10 @@ Plain HTML, CSS, JS — no framework, no build tools, no npm. CSS custom propert
 ---
 
 ## Current state
-- Project detail pages (project-01..06) exist: each has a **Project Details** panel (Client / Sector / Location / Scope), a flexible heading+body area, and a click-to-enlarge **gallery lightbox**. All six now carry real client copy and local photos (T-Mobile, Kohl's, PetSmart, Auntie Anne's/Applegreen, Weis, Tesla).
+- Project detail pages (all 17) each have a **Project Details** panel (Client / Sector / Location / Scope), a flexible heading+body area, and a click-to-enlarge **gallery lightbox**. All carry real client copy and local photos. Each card on `projects.html` has a one-line description (edit `LINES` in `tools/add_project_descriptions.py` and re-run), and cards are equal height (CSS in the projects.html `<style>` block).
 - Each project's gallery is part of its page (not a separate section).
 - Footer standardized sitewide to the 7-service version, plus a **Privacy Policy** link in the Company column (privacy-policy.html is live).
-- `_redirects` (Cloudflare Pages redirect map for the WordPress→new-site URL move) is complete: main pages, services, sectors, six confirmed project mappings, six migrated blog posts, catch-alls. It only takes effect once the site is served through Cloudflare Pages.
+- `_redirects` (Cloudflare Pages redirect map for the WordPress→new-site URL move) is complete: main pages, services, sectors, six confirmed project mappings, six migrated blog posts, catch-alls, plus 301s from the old project-01…17 addresses. Destinations must never end in `.html` (redirect loop on Cloudflare Pages).
 - **Do NOT run `tools/generate_blog.py` until `posts/` is reconciled.** `posts/*.md` is out of sync with the live site: four live posts (habitat-second-year, nevi-ev-charging, safety-emr, retail-construction-trends-2025) have no .md source, and four unpublished drafts do. Running it would publish the drafts and drop the live posts from the grid — and its page template omits the favicon links the live insight pages have. Make sitewide chrome changes with a batch script instead (see `tools/add_privacy_footer_link.py`).
 - **Nav (Sept 2026):** About Us now has a dropdown like Services/Sectors, but it links to sections of the one About Us page (#our-story, #how-we-work, #leadership, #safety). Mobile menu standardized on every page (About Us, Services, Sectors each with children). Re-run `tools/update_nav_about_dropdown.py` to re-apply; it's idempotent.
 - About Us: "Our Story" and "History" are one section (`#our-story`); `#history` still exists as an anchor on the timeline so old links work. Meet the Team ends with a culture blurb + "Explore Life at RJB" button (outside the TEAM markers).
@@ -95,11 +96,22 @@ Plain HTML, CSS, JS — no framework, no build tools, no npm. CSS custom propert
 
 ---
 
+## SEO setup (Oct 2026 audit — keep it this way)
+- **Extensionless links only.** Cloudflare Pages serves `/about-us.html` at `/about-us`, so every internal link points to `/about-us` (homepage: `/`). Never link to `.html`. `tools/fix_internal_links.py` fixes any that creep in (`--check` to report only).
+- **404.html** in the root makes unknown URLs return a real 404 (built by `tools/build_404.py`). Don't delete it.
+- **robots.txt** points to **sitemap.xml**, which `tools/generate_sitemap.py` rebuilds from the page files. Sitemap is submitted in Google Search Console — resubmit after adding, renaming or removing pages.
+- **Canonical tags** on every public page and **Organization schema** (562 Ridge Road, Spring City, PA 19475; info@rjbpro.com; founded 1992; LinkedIn — **no phone number**, by decision) on the homepage, both added by `tools/add_seo_head.py` between `SEO:START`/`SEO:END` markers. Idempotent.
+- Pages kept out of the sitemap and canonicals: 404, thank-you pages, and the three legacy pages. Keep the `EXCLUDE` list in `generate_sitemap.py` and `SKIP` list in `add_seo_head.py` matching.
+- **After adding, renaming or removing any page,** run in order: `fix_internal_links.py`, `add_seo_head.py`, `generate_sitemap.py` (`deploy.sh` does this automatically). A renamed or removed page also needs a 301 in `_redirects`. The `rjb-site-seo-upkeep` Claude skill walks through all of it.
+
+---
+
 ## Known pending
-- Connect custom domain **rjbpro.com** (via Cloudflare Pages, so `_redirects` works).
+- Cloudflare **Email Obfuscation** is still on, so the contact email shows as "[email protected]" on the live site. Mike to turn it off (Cloudflare setting, not a code change).
+- Compress project photos 07–17 in `images/project-photos/` (700KB–1.2MB each vs the 300KB card limit).
 - Back-fill `posts/*.md` for the four live posts with no source, and decide on the four drafts (see Current state).
 - Compress 7 oversized card images (sector-sustainable-infrastructure, service-rollout-programs, sector-grocery, sector-qsr, sector-retail, service-interior-fit-outs, service-store-remodels — all 312–442KB vs the 300KB card limit).
-- Minor cleanup: project-01..06 use the `&#9662;` caret entity in the nav (rest of site uses literal `▾`); authoring-instruction HTML comments remain in project pages (~line 81) and index.html line 12; 3 unreferenced images sit in `images/` (clients/tesla.png, misc/misc-family.jpg, and a root-level duplicate of service-interior-fit-outs-detail.jpg).
+- Minor cleanup: the first six project pages (T-Mobile through Tesla) use the `&#9662;` caret entity in the nav (rest of site uses literal `▾`); authoring-instruction HTML comments remain in project pages (~line 81) and index.html line 12; 3 unreferenced images sit in `images/` (clients/tesla.png, misc/misc-family.jpg, and a root-level duplicate of service-interior-fit-outs-detail.jpg).
 
 ---
 
