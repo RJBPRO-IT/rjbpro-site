@@ -8,3 +8,6 @@ __pycache__/
 
 # Local environment
 .local/
+
+# Blog planning + drafts awaiting approval (never deploy)
+_blog/
