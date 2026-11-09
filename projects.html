@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="RJB Contracting's project portfolio: retail construction, warehouse &amp; industrial, and asset maintenance programs built across America." />
   <title>Projects | RJB Contracting</title>
+  <!-- SEO:START -->
+  <link rel="canonical" href="https://rjbpro.com/projects" />
+  <!-- SEO:END -->
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
@@ -19,54 +22,59 @@
     }
     .project-filter:hover { border-color: var(--navy); }
     .project-filter.is-active { background: var(--orange); border-color: var(--orange); color: var(--white); }
+    /* Equal-height project cards: every row matches the tallest card,
+       and photos line up along the bottom. */
+    .projects-grid { grid-auto-rows: 1fr; }
+    .projects-grid a.project-card { display: flex; flex-direction: column; height: 100%; }
+    .projects-grid .project-info { flex: 1; }
   </style>
 </head>
 <body style="padding-top:var(--nav-h);">
 
   <nav class="site-nav solid" id="site-nav">
     <div class="nav-inner">
-      <a class="nav-logo" href="index.html">
+      <a class="nav-logo" href="/">
         <img src="images/rjb-logo.png" alt="RJB Integrated Commercial Contractors" />
       </a>
       <div class="nav-links">
                 <div class="nav-dropdown">
-          <a href="about-us.html" class="nav-dropdown-trigger">About Us <span class="nav-caret">▾</span></a>
+          <a href="/about-us" class="nav-dropdown-trigger">About Us <span class="nav-caret">▾</span></a>
           <div class="nav-dropdown-menu">
-            <a href="about-us.html#our-story">Our Story</a>
-            <a href="about-us.html#how-we-work">How We Work</a>
-            <a href="about-us.html#leadership">Meet the Team</a>
-            <a href="about-us.html#safety">Safety</a>
+            <a href="/about-us#our-story">Our Story</a>
+            <a href="/about-us#how-we-work">How We Work</a>
+            <a href="/about-us#leadership">Meet the Team</a>
+            <a href="/about-us#safety">Safety</a>
           </div>
         </div>
         <div class="nav-dropdown">
-          <a href="services.html" class="nav-dropdown-trigger">Services <span class="nav-caret">▾</span></a>
+          <a href="/services" class="nav-dropdown-trigger">Services <span class="nav-caret">▾</span></a>
           <div class="nav-dropdown-menu">
-            <a href="service-interior-fit-outs.html">Interior Fit-Outs</a>
-            <a href="service-rollout-programs.html">Rollout Programs</a>
-            <a href="service-store-remodels.html">Store Remodels</a>
-            <a href="service-rebranding-programs.html">Rebranding Programs</a>
-            <a href="service-eifs-coatings.html">EIFS &amp; Coatings</a>
-            <a href="service-site-surveys.html">Site Surveys</a>
-            <a href="service-specialized-solutions.html">Specialized Solutions</a>
+            <a href="/service-interior-fit-outs">Interior Fit-Outs</a>
+            <a href="/service-rollout-programs">Rollout Programs</a>
+            <a href="/service-store-remodels">Store Remodels</a>
+            <a href="/service-rebranding-programs">Rebranding Programs</a>
+            <a href="/service-eifs-coatings">EIFS &amp; Coatings</a>
+            <a href="/service-site-surveys">Site Surveys</a>
+            <a href="/service-specialized-solutions">Specialized Solutions</a>
           </div>
         </div>
         <div class="nav-dropdown">
-          <a href="sectors.html" class="nav-dropdown-trigger">Sectors <span class="nav-caret">▾</span></a>
+          <a href="/sectors" class="nav-dropdown-trigger">Sectors <span class="nav-caret">▾</span></a>
           <div class="nav-dropdown-menu">
-            <a href="sector-grocery.html">Grocery</a>
-            <a href="sector-qsr.html">QSR</a>
-            <a href="sector-retail.html">Retail</a>
-            <a href="sector-warehouse.html">Warehouse &amp; Distribution</a>
-            <a href="sector-sustainable-infrastructure.html">Sustainable Infrastructure</a>
-            <a href="sector-healthcare.html">Healthcare</a>
+            <a href="/sector-grocery">Grocery</a>
+            <a href="/sector-qsr">QSR</a>
+            <a href="/sector-retail">Retail</a>
+            <a href="/sector-warehouse">Warehouse &amp; Distribution</a>
+            <a href="/sector-sustainable-infrastructure">Sustainable Infrastructure</a>
+            <a href="/sector-healthcare">Healthcare</a>
           </div>
         </div>
-        <a href="projects.html">Projects</a>
-        <a href="insights.html">Insights</a>
-        <a href="careers.html">Careers</a>
+        <a href="/projects">Projects</a>
+        <a href="/insights">Insights</a>
+        <a href="/careers">Careers</a>
       </div>
       <div class="nav-cta">
-        <a href="contact-us.html" class="btn btn-orange">Start a Project</a>
+        <a href="/contact-us" class="btn btn-orange">Start a Project</a>
         <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
@@ -74,30 +82,30 @@
     </div>
   </nav>
   <div class="nav-mobile" id="nav-mobile">
-    <div class="nav-mobile-section-label"><a href="about-us.html">About Us</a></div>
-    <a href="about-us.html#our-story" class="nav-mobile-child">Our Story</a>
-    <a href="about-us.html#how-we-work" class="nav-mobile-child">How We Work</a>
-    <a href="about-us.html#leadership" class="nav-mobile-child">Meet the Team</a>
-    <a href="about-us.html#safety" class="nav-mobile-child">Safety</a>
-    <div class="nav-mobile-section-label"><a href="services.html">Services</a></div>
-    <a href="service-interior-fit-outs.html" class="nav-mobile-child">Interior Fit-Outs</a>
-    <a href="service-rollout-programs.html" class="nav-mobile-child">Rollout Programs</a>
-    <a href="service-store-remodels.html" class="nav-mobile-child">Store Remodels</a>
-    <a href="service-rebranding-programs.html" class="nav-mobile-child">Rebranding Programs</a>
-    <a href="service-eifs-coatings.html" class="nav-mobile-child">EIFS &amp; Coatings</a>
-    <a href="service-site-surveys.html" class="nav-mobile-child">Site Surveys</a>
-    <a href="service-specialized-solutions.html" class="nav-mobile-child">Specialized Solutions</a>
-    <div class="nav-mobile-section-label"><a href="sectors.html">Sectors</a></div>
-    <a href="sector-grocery.html" class="nav-mobile-child">Grocery</a>
-    <a href="sector-qsr.html" class="nav-mobile-child">QSR</a>
-    <a href="sector-retail.html" class="nav-mobile-child">Retail</a>
-    <a href="sector-warehouse.html" class="nav-mobile-child">Warehouse &amp; Distribution</a>
-    <a href="sector-sustainable-infrastructure.html" class="nav-mobile-child">Sustainable Infrastructure</a>
-    <a href="sector-healthcare.html" class="nav-mobile-child">Healthcare</a>
-    <a href="projects.html">Projects</a>
-    <a href="insights.html">Insights</a>
-    <a href="careers.html">Careers</a>
-    <a href="contact-us.html" class="btn btn-orange" style="margin-top:1rem;align-self:flex-start;">Start a Project</a>
+    <div class="nav-mobile-section-label"><a href="/about-us">About Us</a></div>
+    <a href="/about-us#our-story" class="nav-mobile-child">Our Story</a>
+    <a href="/about-us#how-we-work" class="nav-mobile-child">How We Work</a>
+    <a href="/about-us#leadership" class="nav-mobile-child">Meet the Team</a>
+    <a href="/about-us#safety" class="nav-mobile-child">Safety</a>
+    <div class="nav-mobile-section-label"><a href="/services">Services</a></div>
+    <a href="/service-interior-fit-outs" class="nav-mobile-child">Interior Fit-Outs</a>
+    <a href="/service-rollout-programs" class="nav-mobile-child">Rollout Programs</a>
+    <a href="/service-store-remodels" class="nav-mobile-child">Store Remodels</a>
+    <a href="/service-rebranding-programs" class="nav-mobile-child">Rebranding Programs</a>
+    <a href="/service-eifs-coatings" class="nav-mobile-child">EIFS &amp; Coatings</a>
+    <a href="/service-site-surveys" class="nav-mobile-child">Site Surveys</a>
+    <a href="/service-specialized-solutions" class="nav-mobile-child">Specialized Solutions</a>
+    <div class="nav-mobile-section-label"><a href="/sectors">Sectors</a></div>
+    <a href="/sector-grocery" class="nav-mobile-child">Grocery</a>
+    <a href="/sector-qsr" class="nav-mobile-child">QSR</a>
+    <a href="/sector-retail" class="nav-mobile-child">Retail</a>
+    <a href="/sector-warehouse" class="nav-mobile-child">Warehouse &amp; Distribution</a>
+    <a href="/sector-sustainable-infrastructure" class="nav-mobile-child">Sustainable Infrastructure</a>
+    <a href="/sector-healthcare" class="nav-mobile-child">Healthcare</a>
+    <a href="/projects">Projects</a>
+    <a href="/insights">Insights</a>
+    <a href="/careers">Careers</a>
+    <a href="/contact-us" class="btn btn-orange" style="margin-top:1rem;align-self:flex-start;">Start a Project</a>
   </div>
 
   <!-- PAGE HERO -->
@@ -114,154 +122,171 @@
     <div class="content-inner">
       <div class="project-filters" id="project-filters" aria-label="Filter projects by service"></div>
       <div class="projects-grid" id="projects-grid">
-        <a class="project-card" href="project-17.html" data-service="Specialized Solutions">
+        <a class="project-card" href="/project-sheetz-survey-program" data-service="Specialized Solutions">
           <div class="project-info">
             <div class="project-cat">Specialized Solutions</div>
             <div class="project-name">Sheetz Survey Program</div>
+            <div class="project-loc">More than 700 locations surveyed in three months.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-17.jpg" alt="Sheetz Survey Program" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-01.html" data-service="Interior Fit-Outs">
+        <a class="project-card" href="/project-t-mobile-store-remodel" data-service="Interior Fit-Outs">
           <div class="project-info">
             <div class="project-cat">Interior Fit-Outs</div>
             <div class="project-name">T-Mobile Store Remodel</div>
+            <div class="project-loc">An ongoing remodel program covering 10 to 20 stores a year.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-01.jpg" alt="T-Mobile Store Remodel" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-02.html" data-service="Rollout Programs">
+        <a class="project-card" href="/project-kohls-queue-line" data-service="Rollout Programs">
           <div class="project-info">
             <div class="project-cat">Rollout Programs</div>
             <div class="project-name">Kohl's Queue Line</div>
+            <div class="project-loc">Self-checkout registers and new power for queue-line refresh stations, store after store.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-02.jpg" alt="Kohl's Queue Line" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-03.html" data-service="Rollout Programs">
+        <a class="project-card" href="/project-petsmart-fish-tank-program" data-service="Rollout Programs">
           <div class="project-info">
             <div class="project-cat">Rollout Programs</div>
             <div class="project-name">PetSmart Fish Tank Program</div>
+            <div class="project-loc">Overnight store refreshes, each finished in five nights while the store stayed open.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-03.jpg" alt="PetSmart Fish Tank Program" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-04.html" data-service="Interior Fit-Outs">
+        <a class="project-card" href="/project-auntie-annes-fit-out" data-service="Interior Fit-Outs">
           <div class="project-info">
             <div class="project-cat">Interior Fit-Outs</div>
             <div class="project-name">Auntie Anne's Fit-Out</div>
+            <div class="project-loc">Full interior fit-out for Applegreen, from demolition to open-ready in four weeks.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-04.jpg" alt="Auntie Anne's Fit-Out" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-05.html" data-service="Store Remodels">
+        <a class="project-card" href="/project-weis-markets-remodel" data-service="Store Remodels">
           <div class="project-info">
             <div class="project-cat">Store Remodels</div>
             <div class="project-name">Weis Markets Remodel</div>
+            <div class="project-loc">Grocery remodels of the departments customers use most, about two months per store.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-05.jpg" alt="Weis Markets Remodel" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-06.html" data-service="Specialized Solutions">
+        <a class="project-card" href="/project-tesla-charger-installation" data-service="Specialized Solutions">
           <div class="project-info">
             <div class="project-cat">Specialized Solutions</div>
             <div class="project-name">Tesla Charger Installation</div>
+            <div class="project-loc">V3 EV charging stations across the Northeast, 8 to 20 chargers per site.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-06.jpg" alt="Tesla Charger Installation" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-07.html" data-service="Store Remodels">
+        <a class="project-card" href="/project-home-depot-restroom-remodel" data-service="Store Remodels">
           <div class="project-info">
             <div class="project-cat">Store Remodels</div>
             <div class="project-name">The Home Depot Restroom Remodel</div>
+            <div class="project-loc">A full restroom renovation, from demolition to reopening in 7 days.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-07.jpg" alt="The Home Depot Restroom Remodel" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-08.html" data-service="Specialized Solutions">
+        <a class="project-card" href="/project-target-vandal-glass" data-service="Specialized Solutions">
           <div class="project-info">
             <div class="project-cat">Specialized Solutions</div>
             <div class="project-name">Target Vandal Glass Installation</div>
+            <div class="project-loc">Vandal-resistant glass installed and replaced at Target stores nationwide.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-08.jpg" alt="Target Vandal Glass Installation" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-09.html" data-service="Rollout Programs">
+        <a class="project-card" href="/project-panera-bread-store-refreshes" data-service="Rollout Programs">
           <div class="project-info">
             <div class="project-cat">Rollout Programs</div>
             <div class="project-name">Panera Bread Store Refreshes</div>
+            <div class="project-loc">20 to 30 stores a year brought to current brand standards, working overnight.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-09.jpg" alt="Panera Bread Store Refreshes" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-10.html" data-service="Specialized Solutions">
+        <a class="project-card" href="/project-amazon-warehouse-remodel" data-service="Store Remodels">
           <div class="project-info">
-            <div class="project-cat">Specialized Solutions</div>
+            <div class="project-cat">Store Remodels</div>
             <div class="project-name">Amazon Warehouse Remodel</div>
+            <div class="project-loc">A 120,000 sq. ft. warehouse renovation in Delaware, plus a 12,000 sq. ft. addition.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-10.jpg" alt="Amazon Warehouse Remodel" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-11.html" data-service="EIFS &amp; Coatings">
+        <a class="project-card" href="/project-sams-club-exterior-repaint" data-service="EIFS &amp; Coatings">
           <div class="project-info">
             <div class="project-cat">EIFS &amp; Coatings</div>
             <div class="project-name">Sam's Club Exterior Repaint</div>
+            <div class="project-loc">Exterior repaints nationwide, including a full conversion to Sam's updated colors.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-11.jpg" alt="Sam's Club Exterior Repaint" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-12.html" data-service="Rollout Programs">
+        <a class="project-card" href="/project-lowes-restroom-remodels" data-service="Rollout Programs">
           <div class="project-info">
             <div class="project-cat">Rollout Programs</div>
             <div class="project-name">Lowe's Restroom Remodels</div>
+            <div class="project-loc">A 5+ year program rebuilding restrooms to Lowe's current brand standard.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-12.jpg" alt="Lowe's Restroom Remodels" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-13.html" data-service="Interior Fit-Outs">
+        <a class="project-card" href="/project-hair-cuttery-fit-out" data-service="Interior Fit-Outs">
           <div class="project-info">
             <div class="project-cat">Interior Fit-Outs</div>
             <div class="project-name">Hair Cuttery Fit-Out</div>
+            <div class="project-loc">A 1,400 sq. ft. tenant fit-out in Lancaster, PA.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-13.jpg" alt="Hair Cuttery Fit-Out" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-14.html" data-service="Interior Fit-Outs">
+        <a class="project-card" href="/project-savers-store-conversions" data-service="Interior Fit-Outs">
           <div class="project-info">
             <div class="project-cat">Interior Fit-Outs</div>
             <div class="project-name">Savers Store Conversion Program</div>
+            <div class="project-loc">Vacant big-box spaces rebuilt into new Savers stores, about 34,000 sq. ft. each.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-14.jpg" alt="Savers Store Conversion Program" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-15.html" data-service="Interior Fit-Outs">
+        <a class="project-card" href="/project-bobs-discount-furniture-fit-out" data-service="Interior Fit-Outs">
           <div class="project-info">
             <div class="project-cat">Interior Fit-Outs</div>
             <div class="project-name">Bob's Discount Furniture Fit-Out</div>
+            <div class="project-loc">A 37,000 sq. ft. shell rebuilt into a new showroom in Catonsville, MD.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-15.jpg" alt="Bob's Discount Furniture Fit-Out" class="project-img" loading="lazy" />
           </div>
         </a>
-        <a class="project-card" href="project-16.html" data-service="Store Remodels">
+        <a class="project-card" href="/project-hannaford-store-remodel" data-service="Store Remodels">
           <div class="project-info">
             <div class="project-cat">Store Remodels</div>
             <div class="project-name">Hannaford Store Remodel</div>
+            <div class="project-loc">A full remodel of a 38,000 sq. ft. supermarket and pharmacy in Meredith, NH.</div>
           </div>
           <div class="project-img-wrap">
             <img src="images/project-photos/project-16.jpg" alt="Hannaford Store Remodel" class="project-img" loading="lazy" />
@@ -278,7 +303,7 @@
         <h2>Have a project in mind?</h2>
         <p>Let's talk about what you're building and how RJB can deliver it.</p>
       </div>
-      <a href="contact-us.html" class="btn btn-orange btn-arrow">Start a Project</a>
+      <a href="/contact-us" class="btn btn-orange btn-arrow">Start a Project</a>
     </div>
   </div>
 
@@ -294,29 +319,29 @@
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="about-us.html#leadership">Leadership</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/about-us#leadership">Leadership</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="service-interior-fit-outs.html">Interior Fit-Outs</a></li>
-            <li><a href="service-rollout-programs.html">Rollout Programs</a></li>
-            <li><a href="service-store-remodels.html">Store Remodels</a></li>
-            <li><a href="service-rebranding-programs.html">Rebranding Programs</a></li>
-            <li><a href="service-eifs-coatings.html">EIFS &amp; Coatings</a></li>
-            <li><a href="service-site-surveys.html">Site Surveys</a></li>
-            <li><a href="service-specialized-solutions.html">Specialized Solutions</a></li>
+            <li><a href="/service-interior-fit-outs">Interior Fit-Outs</a></li>
+            <li><a href="/service-rollout-programs">Rollout Programs</a></li>
+            <li><a href="/service-store-remodels">Store Remodels</a></li>
+            <li><a href="/service-rebranding-programs">Rebranding Programs</a></li>
+            <li><a href="/service-eifs-coatings">EIFS &amp; Coatings</a></li>
+            <li><a href="/service-site-surveys">Site Surveys</a></li>
+            <li><a href="/service-specialized-solutions">Specialized Solutions</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
           <ul>
-            <li><a href="contact-us.html">Start a Project</a></li>
-            <li><a href="subcontractors.html">Become a Subcontractor</a></li>
+            <li><a href="/contact-us">Start a Project</a></li>
+            <li><a href="/subcontractors">Become a Subcontractor</a></li>
             <li><a href="https://www.linkedin.com/company/rjbpro" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
