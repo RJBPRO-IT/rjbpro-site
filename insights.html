@@ -11,6 +11,18 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <style>
+    .insight-filters { display:flex; flex-wrap:wrap; gap:0.5rem; max-width:var(--max-w); margin:0 auto 2rem; padding:0 2rem; }
+    .insight-filter {
+      font-family: var(--font-museo, sans-serif);
+      font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase;
+      color: var(--navy); background: var(--white);
+      border: 1px solid var(--gray-light); border-radius: 999px;
+      padding: 0.5rem 1.1rem; cursor: pointer; transition: var(--transition);
+    }
+    .insight-filter:hover { border-color: var(--navy); }
+    .insight-filter.is-active { background: var(--orange); border-color: var(--orange); color: var(--white); }
+  </style>
 </head>
 <body style="padding-top:var(--nav-h);">
 
@@ -103,7 +115,8 @@
   <!-- ARTICLES GRID -->
   <section class="content-section">
     <div class="content-inner">
-      <div class="insights-grid">
+      <div class="insight-filters" id="insight-filters" aria-label="Filter insights by topic"></div>
+      <div class="insights-grid" id="insights-grid">
       <!-- POSTS:START -->
         <a class="insight-card" href="/insight-home-depot-foundation-marco-island-veterans">
           <div class="insight-card-img"><img src="images/insights/insight-26.jpg" alt="RJB team members with Team Depot volunteers painting a veterans mural in Marco Island, Florida" loading="lazy" /></div>
@@ -323,6 +336,30 @@
     const mobileNav = document.getElementById('nav-mobile');
     toggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
     mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+
+    // Insight topic filter — buttons build from the tags on the cards, so new topics appear automatically.
+    (function () {
+      const grid = document.getElementById('insights-grid');
+      const filters = document.getElementById('insight-filters');
+      if (!grid || !filters) return;
+      const cards = Array.from(grid.querySelectorAll('.insight-card'));
+      const tagOf = c => (c.querySelector('.insight-tag') || {}).textContent?.trim() || '';
+      const counts = {};
+      cards.forEach(c => { const t = tagOf(c); if (t) counts[t] = (counts[t] || 0) + 1; });
+      const tags = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b));
+      ['All', ...tags].forEach((s, i) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'insight-filter' + (i === 0 ? ' is-active' : '');
+        btn.textContent = s;
+        btn.addEventListener('click', () => {
+          filters.querySelectorAll('.insight-filter').forEach(b => b.classList.remove('is-active'));
+          btn.classList.add('is-active');
+          cards.forEach(c => { c.style.display = (s === 'All' || tagOf(c) === s) ? '' : 'none'; });
+        });
+        filters.appendChild(btn);
+      });
+    })();
   </script>
 </body>
 </html>
