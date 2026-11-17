@@ -60,6 +60,7 @@ Plain HTML, CSS, JS — no framework, no build tools, no npm. CSS custom propert
 - **Sectors (6):** sector-grocery, -qsr, -retail, -warehouse, -sustainable-infrastructure, -healthcare.
 - **Project detail pages (17):** descriptive names, e.g. `project-kohls-queue-line`, `project-t-mobile-store-remodel` (linked from `projects.html`). Renamed from project-01…17 in Oct 2026; old addresses 301 to the new ones via `_redirects`. Photos keep their numbered names (`images/project-photos/project-02.jpg`, `project-02-gallery-1.jpg`) — the old-number → new-name map is in `tools/rename_project_pages.py`.
 - **Insights posts:** several `insight-*.html`.
+- **Insights categories (locked Nov 2026):** every post uses exactly one of six — Remodels & Renovations, Project Planning, Safety, Asset Maintenance, Sustainable Infrastructure, Culture & Community. Don't add new ones; the Insights filter buttons build from these card tags. In HTML write `&amp;` for "&".
 - **Legacy (kept but unlinked from nav/footer):** retail-construction, warehouse-construction, asset-maintenance.
 
 ---
