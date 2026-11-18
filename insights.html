@@ -11,6 +11,18 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <style>
+    .insight-filters { display:flex; flex-wrap:wrap; gap:0.5rem; max-width:var(--max-w); margin:0 auto 2rem; padding:0 2rem; }
+    .insight-filter {
+      font-family: var(--font-museo, sans-serif);
+      font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase;
+      color: var(--navy); background: var(--white);
+      border: 1px solid var(--gray-light); border-radius: 999px;
+      padding: 0.5rem 1.1rem; cursor: pointer; transition: var(--transition);
+    }
+    .insight-filter:hover { border-color: var(--navy); }
+    .insight-filter.is-active { background: var(--orange); border-color: var(--orange); color: var(--white); }
+  </style>
 </head>
 <body style="padding-top:var(--nav-h);">
 
@@ -103,12 +115,31 @@
   <!-- ARTICLES GRID -->
   <section class="content-section">
     <div class="content-inner">
-      <div class="insights-grid">
+      <div class="insight-filters" id="insight-filters" aria-label="Filter insights by topic"></div>
+      <div class="insights-grid" id="insights-grid">
       <!-- POSTS:START -->
+        <a class="insight-card" href="/insight-home-depot-foundation-marco-island-veterans">
+          <div class="insight-card-img"><img src="images/insights/insight-26.jpg" alt="RJB team members with Team Depot volunteers painting a veterans mural in Marco Island, Florida" loading="lazy" /></div>
+          <div class="insight-card-body">
+            <div class="insight-tag">Culture &amp; Community</div>
+            <h3 class="insight-title">Honoring Veterans Day: RJB Joins The Home Depot Foundation in Marco Island</h3>
+            <p class="insight-excerpt">This Veterans Day, see how RJB joined The Home Depot Foundation and 500+ volunteers to improve spaces serving veterans in Marco Island, FL.</p>
+            <span class="insight-link">Read More &rarr;</span>
+          </div>
+        </a>
+        <a class="insight-card" href="/insight-retail-checkout-relocation-coordination">
+          <div class="insight-card-img"><img src="images/insights/insight-19.jpg" alt="Self-checkout station with payment terminal and queue fixtures at a retail store checkout" loading="lazy" /></div>
+          <div class="insight-card-body">
+            <div class="insight-tag">Remodels &amp; Renovations</div>
+            <h3 class="insight-title">Small Scope, Big Coordination: Moving a Retail Checkout</h3>
+            <p class="insight-excerpt">A checkout move looks small on a floor plan. How electrical, data, flooring, fixtures, and store operations come together at the front end.</p>
+            <span class="insight-link">Read More &rarr;</span>
+          </div>
+        </a>
         <a class="insight-card" href="/insight-standards-commercial-construction">
           <div class="insight-card-img"><img src="images/insights/insight-25.jpg" alt="Commercial construction team reviewing project specifications and technical standards on an active jobsite" loading="lazy" /></div>
           <div class="insight-card-body">
-            <div class="insight-tag">Construction</div>
+            <div class="insight-tag">Project Planning</div>
             <h3 class="insight-title">Built on Standards: How Shared Requirements Shape Commercial Construction</h3>
             <p class="insight-excerpt">How technical standards guide material testing, system coordination, safety, and energy performance throughout commercial construction.</p>
             <span class="insight-link">Read More &rarr;</span>
@@ -126,7 +157,7 @@
         <a class="insight-card" href="/insight-rjb-team-phillies-game-2026">
           <div class="insight-card-img"><img src="images/insights/insight-17.jpg" alt="RJB teammates and their families together at the Phillies game" loading="lazy" /></div>
           <div class="insight-card-body">
-            <div class="insight-tag">Culture</div>
+            <div class="insight-tag">Culture &amp; Community</div>
             <h3 class="insight-title">A Night at the Ballpark With the RJB Team</h3>
             <p class="insight-excerpt">For the third year in a row, RJB teammates, families, and plus ones came together for a Phillies game and an evening outside the office and jobsite.</p>
             <span class="insight-link">Read More &rarr;</span>
@@ -135,7 +166,7 @@
         <a class="insight-card" href="/insight-teamwork-construction-project-success">
           <div class="insight-card-img"><img src="images/insights/insight-13.jpg" alt="RJB field and office employees collaborating on a commercial construction project" loading="lazy" /></div>
           <div class="insight-card-body">
-            <div class="insight-tag">Culture</div>
+            <div class="insight-tag">Culture &amp; Community</div>
             <h3 class="insight-title">How RJB's Culture of Collaboration Supports Project Success</h3>
             <p class="insight-excerpt">Teamwork in construction is a project-control system, not just a workplace value. How field-to-office communication and The Collaborative Way keep projects moving.</p>
             <span class="insight-link">Read More &rarr;</span>
@@ -144,7 +175,7 @@
         <a class="insight-card" href="/insight-self-checkout-store-layout-customer-flow">
           <div class="insight-card-img"><img src="images/insights/insight-08.jpg" alt="Self-checkout and queue-line installation during a retail store renovation" loading="lazy" /></div>
           <div class="insight-card-body">
-            <div class="insight-tag">Store Operations</div>
+            <div class="insight-tag">Remodels &amp; Renovations</div>
             <h3 class="insight-title">Self-Checkout and Store Layouts: Building a Better Customer Flow</h3>
             <p class="insight-excerpt">Self-checkout is a store-flow decision, not just an equipment swap. How site surveys, rollout planning, and phased work inside open stores shape a better front end.</p>
             <span class="insight-link">Read More &rarr;</span>
@@ -153,7 +184,7 @@
         <a class="insight-card" href="/insight-hidden-costs-poor-construction-scheduling">
           <div class="insight-card-img"><img src="images/insights/insight-11.jpg" alt="Construction team reviewing project drawings on site" loading="lazy" /></div>
           <div class="insight-card-body">
-            <div class="insight-tag">Construction</div>
+            <div class="insight-tag">Project Planning</div>
             <h3 class="insight-title">The Hidden Costs of Poor Construction Scheduling</h3>
             <p class="insight-excerpt">The visible cost of a scheduling problem is the delay. The real cost is the chain reaction around it — remobilization, rework, missed openings, and pressure on quality.</p>
             <span class="insight-link">Read More &rarr;</span>
@@ -171,7 +202,7 @@
         <a class="insight-card" href="/insight-innovation-commercial-construction">
           <div class="insight-card-img"><img src="images/insights/insight-14.jpg" alt="Digital site documentation supporting a commercial construction project" loading="lazy" /></div>
           <div class="insight-card-body">
-            <div class="insight-tag">Construction</div>
+            <div class="insight-tag">Project Planning</div>
             <h3 class="insight-title">Innovation in Commercial Construction: Better Information, Better Execution</h3>
             <p class="insight-excerpt">Technology alone doesn't make a project better. How site data, digital coordination, prefabrication, and consistent field reporting reduce uncertainty on commercial renovations and multi-site programs.</p>
             <span class="insight-link">Read More &rarr;</span>
@@ -189,7 +220,7 @@
         <a class="insight-card" href="/insight-retail-restroom-renovations">
           <div class="insight-card-img"><img src="images/insights/insight-10.jpg" alt="Completed restroom renovation inside an active retail store" loading="lazy" /></div>
           <div class="insight-card-body">
-            <div class="insight-tag">Construction</div>
+            <div class="insight-tag">Remodels &amp; Renovations</div>
             <h3 class="insight-title">Retail Restroom Renovations: Small Spaces With a Big Operational Impact</h3>
             <p class="insight-excerpt">A small room with outsized operational impact. How existing-conditions review, phasing around an open store, accessibility, and durable materials keep restroom work on schedule.</p>
             <span class="insight-link">Read More &rarr;</span>
@@ -198,7 +229,7 @@
         <a class="insight-card" href="/insight-habitat-second-year">
           <div class="insight-card-img"><img src="images/insights/insight-01.jpg" alt="Building Together: RJB's Second Year with Habitat for Humanity" loading="lazy" /></div>
           <div class="insight-card-body">
-            <div class="insight-tag">Culture</div>
+            <div class="insight-tag">Culture &amp; Community</div>
             <h3 class="insight-title">Building Together: RJB's Second Year with Habitat for Humanity</h3>
             <p class="insight-excerpt">For our second annual Habitat for Humanity build day, the RJB team returned to the same neighborhood — painting trim on new homes and seeing last year's houses completed and occupied.</p>
             <span class="insight-link">Read More &rarr;</span>
@@ -225,7 +256,7 @@
         <a class="insight-card" href="/insight-rjb-in-the-community">
           <div class="insight-card-img"><img src="images/insights/insight-04.jpg" alt="RJB Builds with Habitat for Humanity" loading="lazy" /></div>
           <div class="insight-card-body">
-            <div class="insight-tag">Culture</div>
+            <div class="insight-tag">Culture &amp; Community</div>
             <h3 class="insight-title">RJB Builds with Habitat for Humanity</h3>
             <p class="insight-excerpt">Giving back is part of building something bigger. The RJB team spent a volunteer day insulating two Habitat for Humanity homes for local families — and signed on as a Hops for Homes sponsor.</p>
             <span class="insight-link">Read More &rarr;</span>
@@ -234,7 +265,7 @@
         <a class="insight-card" href="/insight-building-for-curbside">
           <div class="insight-card-img"><img src="images/insights/insight-05.jpg" alt="The Growing Demand for Curbside Pickup: How RJB Helps Retailers Adapt" loading="lazy" /></div>
           <div class="insight-card-body">
-            <div class="insight-tag">Construction</div>
+            <div class="insight-tag">Remodels &amp; Renovations</div>
             <h3 class="insight-title">The Growing Demand for Curbside Pickup: How RJB Helps Retailers Adapt</h3>
             <p class="insight-excerpt">Curbside pickup is now a standard expectation. Here's how RJB helps retailers — including BJ's, Kohl's, and Walmart — adapt their stores for pickup and order-ahead fulfillment.</p>
             <span class="insight-link">Read More &rarr;</span>
@@ -243,7 +274,7 @@
         <a class="insight-card" href="/insight-retail-construction-trends-2025">
           <div class="insight-card-img"><img src="images/insights/insight-06.jpg" alt="Looking Ahead: Retail Construction Trends for 2025 and Beyond" loading="lazy" /></div>
           <div class="insight-card-body">
-            <div class="insight-tag">Construction</div>
+            <div class="insight-tag">Project Planning</div>
             <h3 class="insight-title">Looking Ahead: Retail Construction Trends for 2025 and Beyond</h3>
             <p class="insight-excerpt">Sustainability as standard, in-store technology, modular layouts, and experiential retail — the trends RJB sees shaping retail construction in 2025 and beyond.</p>
             <span class="insight-link">Read More &rarr;</span>
@@ -305,6 +336,30 @@
     const mobileNav = document.getElementById('nav-mobile');
     toggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
     mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+
+    // Insight topic filter — buttons build from the tags on the cards, so new topics appear automatically.
+    (function () {
+      const grid = document.getElementById('insights-grid');
+      const filters = document.getElementById('insight-filters');
+      if (!grid || !filters) return;
+      const cards = Array.from(grid.querySelectorAll('.insight-card'));
+      const tagOf = c => (c.querySelector('.insight-tag') || {}).textContent?.trim() || '';
+      const counts = {};
+      cards.forEach(c => { const t = tagOf(c); if (t) counts[t] = (counts[t] || 0) + 1; });
+      const tags = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b));
+      ['All', ...tags].forEach((s, i) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'insight-filter' + (i === 0 ? ' is-active' : '');
+        btn.textContent = s;
+        btn.addEventListener('click', () => {
+          filters.querySelectorAll('.insight-filter').forEach(b => b.classList.remove('is-active'));
+          btn.classList.add('is-active');
+          cards.forEach(c => { c.style.display = (s === 'All' || tagOf(c) === s) ? '' : 'none'; });
+        });
+        filters.appendChild(btn);
+      });
+    })();
   </script>
 </body>
 </html>
